@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2022.06.1</version>
+  <version>BANK-VERSION-USING-2022.05.7-rc.0</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2022.06.1</version>
+        <version>2022.05.7-rc.0</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -164,12 +164,6 @@ Typically, not everything is needed.
     <dependency>
       <groupId>com.backbase</groupId>
       <artifactId>clamav-antivirus-connector</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>clamav-antivirus-connector</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
     </dependency>
     <dependency>
       <groupId>com.backbase</groupId>
@@ -1092,32 +1086,6 @@ Typically, not everything is needed.
     <dependency>
       <groupId>com.backbase.pfm.pocket</groupId>
       <artifactId>pocket-tailor</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.pfm.analysis</groupId>
-      <artifactId>income-expense-analyzer</artifactId>
-      <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.pfm.analysis</groupId>
-      <artifactId>income-expense-analyzer</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.pfm.analysis</groupId>
-      <artifactId>income-expense-analyzer</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.pfm.analysis</groupId>
-      <artifactId>income-expense-analyzer</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.pfm.analysis</groupId>
-      <artifactId>income-expense-analyzer</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
