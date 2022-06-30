@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2022.06.6</version>
+  <version>BANK-VERSION-USING-2022.06.7-rc.0</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2022.06.6</version>
+        <version>2022.06.7-rc.0</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -1956,6 +1956,44 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::remote-deposit-capture-bom[] -->
+<!-- tag::rtc-bom[] -->
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc</artifactId>
+      <type>zip</type>
+      <classifier>sql</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc-twilio-integrator</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc-twilio-integrator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc-twilio-integrator</artifactId>
+      <type>zip</type>
+      <classifier>sql</classifier>
+    </dependency>
+<!-- end::rtc-bom[] -->
 <!-- tag::batches-bom[] -->
     <dependency>
       <groupId>com.backbase.batch</groupId>
