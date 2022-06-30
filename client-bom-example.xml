@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2022.06.7-rc.0</version>
+  <version>BANK-VERSION-USING-2022.07-rc.8</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2022.06.7-rc.0</version>
+        <version>2022.07-rc.8</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -369,89 +369,6 @@ Typically, not everything is needed.
       <artifactId>communication-channel</artifactId>
     </dependency>
 <!-- end::message-delivery-bom[] -->
-<!-- tag::engagements-bom[] -->
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-      <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-      <type>zip</type>
-      <classifier>sql</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>realtime-engagement-orchestrator</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>realtime-engagement-orchestrator</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>realtime-engagement-orchestrator</artifactId>
-      <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>realtime-engagement-orchestrator</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::engagements-bom[] -->
-<!-- tag::engagement-content-bom[] -->
-    <dependency>
-      <groupId>com.backbase.contentenricher</groupId>
-      <artifactId>content-enricher</artifactId>
-      <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.contentenricher</groupId>
-      <artifactId>content-enricher</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.contentenricher</groupId>
-      <artifactId>content-enricher</artifactId>
-      <type>zip</type>
-      <classifier>sql</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.contentenricher</groupId>
-      <artifactId>content-enricher</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.contentenricher</groupId>
-      <artifactId>content-enricher</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::engagement-content-bom[] -->
 <!-- tag::auditing-bom[] -->
     <dependency>
       <groupId>com.backbase.cxp</groupId>
