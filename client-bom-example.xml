@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2022.08-rc.11</version>
+  <version>BANK-VERSION-USING-2022.08-rc.12</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2022.08-rc.11</version>
+        <version>2022.08-rc.12</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -2213,6 +2213,34 @@ Typically, not everything is needed.
       <artifactId>loan-integration-outbound-mock</artifactId>
     </dependency>
 <!-- end::loans-bom[] -->
+<!-- tag::address-autocomplete-bom[] -->
+    <dependency>
+      <groupId>com.backbase.address-autocomplete</groupId>
+      <artifactId>address-autocomplete</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.address-autocomplete</groupId>
+      <artifactId>address-autocomplete</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.address-autocomplete</groupId>
+      <artifactId>address-autocomplete</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.address-autocomplete</groupId>
+      <artifactId>address-autocomplete</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.address-autocomplete</groupId>
+      <artifactId>address-autocomplete</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::address-autocomplete-bom[] -->
 <!-- tag::user-lifecycle-bom[] -->
     <dependency>
       <groupId>com.backbase.userlifecycle</groupId>
