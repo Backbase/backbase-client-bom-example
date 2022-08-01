@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2022.08-rc.13</version>
+  <version>BANK-VERSION-USING-2022.07.3</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2022.08-rc.13</version>
+        <version>2022.07.3</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -273,16 +273,6 @@ Typically, not everything is needed.
     <dependency>
       <groupId>com.backbase.platform.edge.filters</groupId>
       <artifactId>http-security-filter</artifactId>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.platform.edge.filters</groupId>
-      <artifactId>form-auth-filter</artifactId>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.platform.edge.filters</groupId>
-      <artifactId>scoped-access</artifactId>
       <type>jar</type>
     </dependency>
 <!-- end::edge-bom[] -->
@@ -1533,21 +1523,6 @@ Typically, not everything is needed.
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-ach-integration-mock</artifactId>
-      <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-ach-integration-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-ach-integration-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
 <!-- end::positive-pay-bom[] -->
 <!-- tag::vendor-bom[] -->
     <dependency>
@@ -2213,34 +2188,6 @@ Typically, not everything is needed.
       <artifactId>loan-integration-outbound-mock</artifactId>
     </dependency>
 <!-- end::loans-bom[] -->
-<!-- tag::address-autocomplete-bom[] -->
-    <dependency>
-      <groupId>com.backbase.address-autocomplete</groupId>
-      <artifactId>address-autocomplete</artifactId>
-      <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.address-autocomplete</groupId>
-      <artifactId>address-autocomplete</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.address-autocomplete</groupId>
-      <artifactId>address-autocomplete</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.address-autocomplete</groupId>
-      <artifactId>address-autocomplete</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.address-autocomplete</groupId>
-      <artifactId>address-autocomplete</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::address-autocomplete-bom[] -->
 <!-- tag::user-lifecycle-bom[] -->
     <dependency>
       <groupId>com.backbase.userlifecycle</groupId>
