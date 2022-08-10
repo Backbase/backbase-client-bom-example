@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2022.09-rc.3</version>
+  <version>BANK-VERSION-USING-2022.08.2-LTS-rc.1</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2022.09-rc.3</version>
+        <version>2022.08.2-LTS-rc.1</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -462,6 +462,63 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::engagement-content-bom[] -->
+<!-- tag::auditing-bom[] -->
+    <dependency>
+      <groupId>com.backbase.cxp</groupId>
+      <artifactId>auditing</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.cxp</groupId>
+      <artifactId>auditing</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.cxp</groupId>
+      <artifactId>auditing</artifactId>
+      <type>zip</type>
+      <classifier>sql</classifier>
+    </dependency>
+<!-- end::auditing-bom[] -->
+<!-- tag::content-approvals-bom[] -->
+    <dependency>
+      <groupId>com.backbase.cxp.space-controller</groupId>
+      <artifactId>space-controller-service</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.cxp.space-controller</groupId>
+      <artifactId>space-controller-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.cxp.space-controller</groupId>
+      <artifactId>space-controller-service</artifactId>
+      <type>zip</type>
+      <classifier>sql</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.cxp.space-controller</groupId>
+      <artifactId>space-controller-service</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+<!-- end::content-approvals-bom[] -->
+<!-- tag::portal-bom[] -->
+    <dependency>
+      <groupId>com.backbase.cxp</groupId>
+      <artifactId>portal</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.cxp</groupId>
+      <artifactId>portal</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.cxp</groupId>
+      <artifactId>portal</artifactId>
+      <type>zip</type>
+      <classifier>sql</classifier>
+    </dependency>
+<!-- end::portal-bom[] -->
 <!-- tag::push-notifications-bom[] -->
     <dependency>
       <groupId>com.backbase.services.mobile</groupId>
@@ -2585,11 +2642,6 @@ Typically, not everything is needed.
     </dependency>
 <!-- end::limit-bom[] -->
 <!-- tag::trade-finance-bom[] -->
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>letter-of-credit</artifactId>
-      <type>war</type>
-    </dependency>
     <dependency>
       <groupId>com.backbase</groupId>
       <artifactId>letter-of-credit</artifactId>
