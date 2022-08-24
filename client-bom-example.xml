@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2022.06.8</version>
+  <version>BANK-VERSION-USING-2022.07.5</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2022.06.8</version>
+        <version>2022.07.5</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -838,6 +838,34 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::web-authentication-bom[] -->
+<!-- tag::self-enrollment-journey-bom[] -->
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>enrollment-manager</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>enrollment-manager</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>enrollment-manager</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>enrollment-manager</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>enrollment-manager</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::self-enrollment-journey-bom[] -->
 <!-- tag::self-enrollment-support-api-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
@@ -1980,6 +2008,12 @@ Typically, not everything is needed.
     </dependency>
     <dependency>
       <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
       <artifactId>rtc-twilio-integrator</artifactId>
       <type>war</type>
     </dependency>
@@ -1992,6 +2026,12 @@ Typically, not everything is needed.
       <artifactId>rtc-twilio-integrator</artifactId>
       <type>zip</type>
       <classifier>sql</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc-twilio-integrator</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
     </dependency>
 <!-- end::rtc-bom[] -->
 <!-- tag::batches-bom[] -->
@@ -2148,6 +2188,40 @@ Typically, not everything is needed.
       <artifactId>loan-integration-outbound-mock</artifactId>
     </dependency>
 <!-- end::loans-bom[] -->
+<!-- tag::user-lifecycle-bom[] -->
+    <dependency>
+      <groupId>com.backbase.userlifecycle</groupId>
+      <artifactId>user-lifecycle</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.userlifecycle</groupId>
+      <artifactId>user-lifecycle</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.userlifecycle</groupId>
+      <artifactId>user-lifecycle</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.userlifecycle</groupId>
+      <artifactId>user-lifecycle</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.userlifecycle</groupId>
+      <artifactId>user-lifecycle</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.userlifecycle</groupId>
+      <artifactId>user-lifecycle</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::user-lifecycle-bom[] -->
 <!-- tag::user-management-bom[] -->
     <dependency>
       <groupId>com.backbase.dbs.user</groupId>
