@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2022.09.4</version>
+  <version>BANK-VERSION-USING-2022.08.7-LTS</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2022.09.4</version>
+        <version>2022.08.7-LTS</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -316,12 +316,6 @@ Typically, not everything is needed.
       <groupId>com.backbase.tools</groupId>
       <artifactId>provisioner-cli</artifactId>
     </dependency>
-    <dependency>
-      <groupId>com.backbase.tools</groupId>
-      <artifactId>provisioner</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
 <!-- end::provisioning-bom[] -->
 <!-- tag::service-discovery-bom[] -->
     <dependency>
@@ -381,66 +375,10 @@ Typically, not everything is needed.
       <classifier>api</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.communication</groupId>
-      <artifactId>communication</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
       <groupId>com.backbase.buildingblocks</groupId>
       <artifactId>communication-channel</artifactId>
     </dependency>
 <!-- end::message-delivery-bom[] -->
-<!-- tag::audiences-bom[] -->
-    <dependency>
-      <groupId>com.backbase.usersegment</groupId>
-      <artifactId>user-segment</artifactId>
-      <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.usersegment</groupId>
-      <artifactId>user-segment</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.usersegment</groupId>
-      <artifactId>user-segment</artifactId>
-      <type>zip</type>
-      <classifier>sql</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.usersegment</groupId>
-      <artifactId>user-segment</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.usersegment</groupId>
-      <artifactId>user-segment</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.usersegment.collector</groupId>
-      <artifactId>user-segments-collector</artifactId>
-      <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.usersegment.collector</groupId>
-      <artifactId>user-segments-collector</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.usersegment.collector</groupId>
-      <artifactId>user-segments-collector</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.usersegment.collector</groupId>
-      <artifactId>user-segments-collector</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::audiences-bom[] -->
 <!-- tag::engagements-bom[] -->
     <dependency>
       <groupId>com.backbase.engagement</groupId>
@@ -524,6 +462,63 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::engagement-content-bom[] -->
+<!-- tag::auditing-bom[] -->
+    <dependency>
+      <groupId>com.backbase.cxp</groupId>
+      <artifactId>auditing</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.cxp</groupId>
+      <artifactId>auditing</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.cxp</groupId>
+      <artifactId>auditing</artifactId>
+      <type>zip</type>
+      <classifier>sql</classifier>
+    </dependency>
+<!-- end::auditing-bom[] -->
+<!-- tag::content-approvals-bom[] -->
+    <dependency>
+      <groupId>com.backbase.cxp.space-controller</groupId>
+      <artifactId>space-controller-service</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.cxp.space-controller</groupId>
+      <artifactId>space-controller-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.cxp.space-controller</groupId>
+      <artifactId>space-controller-service</artifactId>
+      <type>zip</type>
+      <classifier>sql</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.cxp.space-controller</groupId>
+      <artifactId>space-controller-service</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+<!-- end::content-approvals-bom[] -->
+<!-- tag::portal-bom[] -->
+    <dependency>
+      <groupId>com.backbase.cxp</groupId>
+      <artifactId>portal</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.cxp</groupId>
+      <artifactId>portal</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.cxp</groupId>
+      <artifactId>portal</artifactId>
+      <type>zip</type>
+      <classifier>sql</classifier>
+    </dependency>
+<!-- end::portal-bom[] -->
 <!-- tag::push-notifications-bom[] -->
     <dependency>
       <groupId>com.backbase.services.mobile</groupId>
@@ -560,12 +555,6 @@ Typically, not everything is needed.
       <artifactId>push-integration-service</artifactId>
       <type>zip</type>
       <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.services.mobile</groupId>
-      <artifactId>push-integration-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
     </dependency>
 <!-- end::push-notifications-bom[] -->
 <!-- tag::identity-core-bom[] -->
@@ -715,12 +704,6 @@ Typically, not everything is needed.
       <artifactId>mobile-authentication</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>passcode-validation-extension-service-api</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
     </dependency>
 <!-- end::mobile-authentication-bom[] -->
 <!-- tag::fido-bom[] -->
@@ -1840,12 +1823,6 @@ Typically, not everything is needed.
       <artifactId>notifications-service</artifactId>
       <classifier>classes</classifier>
     </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.notifications</groupId>
-      <artifactId>notifications-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
 <!-- end::notifications-bom[] -->
 <!-- tag::messages-bom[] -->
     <dependency>
@@ -1890,12 +1867,6 @@ Typically, not everything is needed.
       <groupId>com.backbase.dbs.messages</groupId>
       <artifactId>messages-service</artifactId>
       <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.messages</groupId>
-      <artifactId>messages-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
     </dependency>
 <!-- end::messages-bom[] -->
 <!-- tag::action-bom[] -->
@@ -1944,18 +1915,6 @@ Typically, not everything is needed.
     <dependency>
       <groupId>com.backbase.dbs.actions</groupId>
       <artifactId>actions-integration-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.actions</groupId>
-      <artifactId>action-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.actions</groupId>
-      <artifactId>actions-integration-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
     </dependency>
 <!-- end::action-bom[] -->
 <!-- tag::billpay-bom[] -->
@@ -2689,11 +2648,6 @@ Typically, not everything is needed.
     </dependency>
 <!-- end::limit-bom[] -->
 <!-- tag::trade-finance-bom[] -->
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>letter-of-credit</artifactId>
-      <type>war</type>
-    </dependency>
     <dependency>
       <groupId>com.backbase</groupId>
       <artifactId>letter-of-credit</artifactId>
