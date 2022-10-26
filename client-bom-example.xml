@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2022.10.5</version>
+  <version>BANK-VERSION-USING-2022.09.5</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2022.10.5</version>
+        <version>2022.09.5</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -183,21 +183,6 @@ Typically, not everything is needed.
     <dependency>
       <groupId>com.backbase</groupId>
       <artifactId>s3-storage-connector</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>azure-blob-storage-connector</artifactId>
-      <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>azure-blob-storage-connector</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>azure-blob-storage-connector</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
@@ -537,12 +522,6 @@ Typically, not everything is needed.
       <artifactId>content-enricher</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.contentenricher</groupId>
-      <artifactId>content-enricher</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
     </dependency>
 <!-- end::engagement-content-bom[] -->
 <!-- tag::push-notifications-bom[] -->
