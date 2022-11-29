@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2022.11.6</version>
+  <version>BANK-VERSION-USING-2022.10.6</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2022.11.6</version>
+        <version>2022.10.6</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -297,11 +297,6 @@ Typically, not everything is needed.
     </dependency>
     <dependency>
       <groupId>com.backbase.platform.edge.filters</groupId>
-      <artifactId>trace-filter</artifactId>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.platform.edge.filters</groupId>
       <artifactId>scoped-access</artifactId>
       <type>jar</type>
     </dependency>
@@ -407,29 +402,8 @@ Typically, not everything is needed.
       <classifier>events</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.communication</groupId>
-      <artifactId>communication</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
       <groupId>com.backbase.buildingblocks</groupId>
       <artifactId>communication-channel</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.communication</groupId>
-      <artifactId>ses-email-integration-service</artifactId>
-      <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.communication</groupId>
-      <artifactId>ses-email-integration-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.communication</groupId>
-      <artifactId>ses-email-integration-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
     </dependency>
 <!-- end::message-delivery-bom[] -->
 <!-- tag::audiences-bom[] -->
@@ -947,26 +921,6 @@ Typically, not everything is needed.
       <type>zip</type>
       <classifier>api</classifier>
     </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>enrollment-support-service-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>enrollment-support-service-mock</artifactId>
-      <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>enrollment-support-service-mock</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>enrollment-support-service-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
 <!-- end::self-enrollment-support-api-bom[] -->
 <!-- tag::communications-outbound-integration-bom[] -->
     <dependency>
@@ -1078,12 +1032,6 @@ Typically, not everything is needed.
       <artifactId>account-statement</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.account</groupId>
-      <artifactId>account-statement</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
     </dependency>
     <dependency>
       <groupId>com.backbase.dbs.account</groupId>
@@ -1337,10 +1285,6 @@ Typically, not everything is needed.
     <dependency>
       <groupId>com.backbase</groupId>
       <artifactId>portfolio</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>portfolio-mock</artifactId>
     </dependency>
     <dependency>
       <groupId>com.backbase</groupId>
@@ -1852,32 +1796,6 @@ Typically, not everything is needed.
     </dependency>
 <!-- end::transaction-bom[] -->
 <!-- tag::external-account-aggregation-bom[] -->
-    <dependency>
-      <groupId>com.backbase.eaa.aggregation</groupId>
-      <artifactId>external-account-aggregator</artifactId>
-      <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.eaa.aggregation</groupId>
-      <artifactId>external-account-aggregator</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.eaa.aggregation</groupId>
-      <artifactId>external-account-aggregator</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.eaa.aggregation</groupId>
-      <artifactId>external-account-aggregator</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.eaa.aggregation</groupId>
-      <artifactId>external-account-aggregator</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
     <dependency>
       <groupId>com.backbase.dbs.eaa.fi</groupId>
       <artifactId>financial-institution-manager</artifactId>
