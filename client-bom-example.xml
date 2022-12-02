@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2022.02.4</version>
+  <version>BANK-VERSION-USING-2022.06.9</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2022.02.4</version>
+        <version>2022.06.9</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -134,23 +134,6 @@ Typically, not everything is needed.
       <type>jar</type>
     </dependency>
 <!-- end::authentication-bom[] -->
-<!-- tag::bas-tc-bom[] -->
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>bb-authentication-token-converter-service</artifactId>
-      <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>bb-authentication-token-converter-service</artifactId>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>platform-starter-token-converter</artifactId>
-      <type>jar</type>
-    </dependency>
-<!-- end::bas-tc-bom[] -->
 <!-- tag::document-storage-bom[] -->
     <dependency>
       <groupId>com.backbase.cxp</groupId>
@@ -184,12 +167,24 @@ Typically, not everything is needed.
     </dependency>
     <dependency>
       <groupId>com.backbase</groupId>
+      <artifactId>clamav-antivirus-connector</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
       <artifactId>s3-storage-connector</artifactId>
       <type>war</type>
     </dependency>
     <dependency>
       <groupId>com.backbase</groupId>
       <artifactId>s3-storage-connector</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>s3-storage-connector</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
     </dependency>
 <!-- end::document-storage-bom[] -->
 <!-- tag::audit-bom[] -->
@@ -233,6 +228,12 @@ Typically, not everything is needed.
       <groupId>com.backbase.platform</groupId>
       <artifactId>edge</artifactId>
       <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.platform</groupId>
+      <artifactId>edge</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
     </dependency>
     <dependency>
       <groupId>com.backbase.platform.edge.filters</groupId>
@@ -317,6 +318,12 @@ Typically, not everything is needed.
       <artifactId>registry</artifactId>
       <type>jar</type>
     </dependency>
+    <dependency>
+      <groupId>com.backbase.infra</groupId>
+      <artifactId>registry</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
 <!-- end::service-discovery-bom[] -->
 <!-- tag::remote-config-bom[] -->
     <dependency>
@@ -362,6 +369,89 @@ Typically, not everything is needed.
       <artifactId>communication-channel</artifactId>
     </dependency>
 <!-- end::message-delivery-bom[] -->
+<!-- tag::engagements-bom[] -->
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>zip</type>
+      <classifier>sql</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>realtime-engagement-orchestrator</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>realtime-engagement-orchestrator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>realtime-engagement-orchestrator</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>realtime-engagement-orchestrator</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::engagements-bom[] -->
+<!-- tag::engagement-content-bom[] -->
+    <dependency>
+      <groupId>com.backbase.contentenricher</groupId>
+      <artifactId>content-enricher</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.contentenricher</groupId>
+      <artifactId>content-enricher</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.contentenricher</groupId>
+      <artifactId>content-enricher</artifactId>
+      <type>zip</type>
+      <classifier>sql</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.contentenricher</groupId>
+      <artifactId>content-enricher</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.contentenricher</groupId>
+      <artifactId>content-enricher</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::engagement-content-bom[] -->
 <!-- tag::auditing-bom[] -->
     <dependency>
       <groupId>com.backbase.cxp</groupId>
@@ -567,6 +657,21 @@ Typically, not everything is needed.
       <groupId>com.backbase.identity</groupId>
       <artifactId>token-converter-service-archetype</artifactId>
     </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>bb-authentication-token-converter-service</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>bb-authentication-token-converter-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>bb-authentication-token-converter-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
 <!-- end::token-converter-bom[] -->
 <!-- tag::mobile-authentication-bom[] -->
     <dependency>
@@ -733,6 +838,14 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::web-authentication-bom[] -->
+<!-- tag::self-enrollment-support-api-bom[] -->
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>enrollment-support-service-api</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+<!-- end::self-enrollment-support-api-bom[] -->
 <!-- tag::communications-outbound-integration-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
@@ -916,6 +1029,14 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::contacts-bom[] -->
+<!-- tag::consent-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.consent</groupId>
+      <artifactId>consent-spec</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+<!-- end::consent-bom[] -->
 <!-- tag::financial-insights-bom[] -->
     <dependency>
       <groupId>com.backbase.dbs.pfm</groupId>
@@ -1054,6 +1175,32 @@ Typically, not everything is needed.
     <dependency>
       <groupId>com.backbase.pfm.pocket</groupId>
       <artifactId>pocket-tailor</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.pfm.analysis</groupId>
+      <artifactId>income-expense-analyzer</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.pfm.analysis</groupId>
+      <artifactId>income-expense-analyzer</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.pfm.analysis</groupId>
+      <artifactId>income-expense-analyzer</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.pfm.analysis</groupId>
+      <artifactId>income-expense-analyzer</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.pfm.analysis</groupId>
+      <artifactId>income-expense-analyzer</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
@@ -1809,6 +1956,44 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::remote-deposit-capture-bom[] -->
+<!-- tag::rtc-bom[] -->
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc</artifactId>
+      <type>zip</type>
+      <classifier>sql</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc-twilio-integrator</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc-twilio-integrator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc-twilio-integrator</artifactId>
+      <type>zip</type>
+      <classifier>sql</classifier>
+    </dependency>
+<!-- end::rtc-bom[] -->
 <!-- tag::batches-bom[] -->
     <dependency>
       <groupId>com.backbase.batch</groupId>
