@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2023.01.11</version>
+  <version>BANK-VERSION-USING-2023.02.8-LTS</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2023.01.11</version>
+        <version>2023.02.8-LTS</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -442,6 +442,12 @@ Typically, not everything is needed.
     <dependency>
       <groupId>com.backbase.usersegment</groupId>
       <artifactId>user-segment</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.usersegment</groupId>
+      <artifactId>user-segment</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
@@ -598,6 +604,12 @@ Typically, not everything is needed.
       <artifactId>push-integration-service</artifactId>
       <type>zip</type>
       <classifier>sql</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.services.mobile</groupId>
+      <artifactId>push-integration-service</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
     </dependency>
     <dependency>
       <groupId>com.backbase.services.mobile</groupId>
@@ -1366,6 +1378,18 @@ Typically, not everything is needed.
     <dependency>
       <groupId>com.backbase</groupId>
       <artifactId>portfolio</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>portfolio-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>portfolio</artifactId>
       <type>war</type>
     </dependency>
     <dependency>
@@ -1678,6 +1702,12 @@ Typically, not everything is needed.
       <classifier>api</classifier>
     </dependency>
     <dependency>
+      <groupId>com.backbase.vendor</groupId>
+      <artifactId>customer-provider-integrator</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
       <groupId>com.backbase.dbs.vendor</groupId>
       <artifactId>payveris</artifactId>
       <type>zip</type>
@@ -1686,6 +1716,12 @@ Typically, not everything is needed.
     <dependency>
       <groupId>com.backbase.dbs.vendor</groupId>
       <artifactId>payveris</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.vendor</groupId>
+      <artifactId>payveris</artifactId>
     </dependency>
     <dependency>
       <groupId>com.backbase.dbs.vendor</groupId>
@@ -1742,6 +1778,26 @@ Typically, not everything is needed.
       <artifactId>payveris-mock</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.vendor</groupId>
+      <artifactId>customer-provider-integrator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.vendor</groupId>
+      <artifactId>customer-provider-integrator</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.vendor</groupId>
+      <artifactId>customer-provider-integrator</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.vendor</groupId>
+      <artifactId>customer-provider-integrator</artifactId>
+      <classifier>classes</classifier>
     </dependency>
 <!-- end::vendor-bom[] -->
 <!-- tag::employee-bom[] -->
@@ -2402,11 +2458,6 @@ Typically, not everything is needed.
     <dependency>
       <groupId>com.backbase.loan</groupId>
       <artifactId>loan</artifactId>
-      <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan</artifactId>
     </dependency>
     <dependency>
       <groupId>com.backbase.loan</groupId>
@@ -2417,18 +2468,13 @@ Typically, not everything is needed.
       <groupId>com.backbase.loan</groupId>
       <artifactId>loan</artifactId>
       <type>zip</type>
-      <classifier>sql</classifier>
+      <classifier>api</classifier>
     </dependency>
     <dependency>
       <groupId>com.backbase.loan</groupId>
       <artifactId>loan</artifactId>
       <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan-integration-outbound-mock</artifactId>
-      <type>war</type>
+      <classifier>liquibase</classifier>
     </dependency>
     <dependency>
       <groupId>com.backbase.loan</groupId>
