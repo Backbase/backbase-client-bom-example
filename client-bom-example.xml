@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2023.03.2</version>
+  <version>BANK-VERSION-USING-2023.03.3</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2023.03.2</version>
+        <version>2023.03.3</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -1138,6 +1138,22 @@ Typically, not everything is needed.
       <artifactId>account-mock</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.products</groupId>
+      <artifactId>arrangement-clients</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.products</groupId>
+      <artifactId>arrangement-persistence</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.products</groupId>
+      <artifactId>test-util</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.products</groupId>
+      <artifactId>multi-context</artifactId>
     </dependency>
 <!-- end::products-bom[] -->
 <!-- tag::payments-bom[] -->
