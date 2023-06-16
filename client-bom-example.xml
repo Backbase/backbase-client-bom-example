@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2023.03.14</version>
+  <version>BANK-VERSION-USING-2023.06.2</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2023.03.14</version>
+        <version>2023.06.2</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -894,8 +894,29 @@ Typically, not everything is needed.
 <!-- end::account-statements-bom[] -->
 <!-- tag::card-management-bom[] -->
     <dependency>
+      <groupId>com.backbase.card</groupId>
+      <artifactId>card-manager</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.card</groupId>
+      <artifactId>card-manager</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.card</groupId>
+      <artifactId>card-manager</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
       <groupId>com.backbase.dbs.cards</groupId>
       <artifactId>card-manager</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.cards.entrust</groupId>
+      <artifactId>entrust-card-api</artifactId>
       <type>zip</type>
       <classifier>api</classifier>
     </dependency>
@@ -1232,10 +1253,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.paymentorder</groupId>
-      <artifactId>payment-order-common-spec</artifactId>
-    </dependency>
-    <dependency>
       <groupId>com.backbase.payments.synchronizer</groupId>
       <artifactId>payment-synchronizer</artifactId>
     </dependency>
@@ -1476,6 +1493,12 @@ Typically, not everything is needed.
     <dependency>
       <groupId>com.backbase.employee.actions</groupId>
       <artifactId>employee-actions</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.employee.actions</groupId>
+      <artifactId>employee-actions</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
@@ -1591,6 +1614,12 @@ Typically, not everything is needed.
       <artifactId>external-account-aggregator</artifactId>
       <type>zip</type>
       <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.eaa.aggregation</groupId>
+      <artifactId>external-account-aggregator</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
     </dependency>
     <dependency>
       <groupId>com.backbase.eaa.aggregation</groupId>
@@ -1965,6 +1994,35 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::loans-bom[] -->
+<!-- tag::savvy-money-credit-scorer-bom[] -->
+    <dependency>
+      <groupId>com.backbase.credscr.savvymoney</groupId>
+      <artifactId>savvy-money-credit-scorer</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.credscr.savvymoney</groupId>
+      <artifactId>savvy-money-credit-scorer</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.credscr.savvymoney</groupId>
+      <artifactId>savvy-money-credit-scorer</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.credscr.savvymoney</groupId>
+      <artifactId>savvy-money-credit-scorer</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.credscr.savvymoney</groupId>
+      <artifactId>savvy-money-credit-scorer</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+<!-- end::savvy-money-credit-scorer-bom[] -->
 <!-- tag::account-recovery-manager-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
