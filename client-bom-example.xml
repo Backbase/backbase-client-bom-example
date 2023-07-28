@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2023.07.4</version>
+  <version>BANK-VERSION-USING-2023.06.7</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2023.07.4</version>
+        <version>2023.06.7</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -130,22 +130,6 @@ Typically, not everything is needed.
     <dependency>
       <groupId>com.backbase.dbs.audit</groupId>
       <artifactId>audit-client</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>audit-mass-indexer-agent</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>audit-mass-indexer-agent</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>audit-mass-indexer-agent</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
     </dependency>
 <!-- end::audit-bom[] -->
 <!-- tag::edge-bom[] -->
@@ -338,12 +322,6 @@ Typically, not everything is needed.
     <dependency>
       <groupId>com.backbase.usersegment.collector</groupId>
       <artifactId>user-segments-collector</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.usersegment.collector</groupId>
-      <artifactId>user-segments-collector</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
     </dependency>
     <dependency>
       <groupId>com.backbase.usersegment.collector</groupId>
