@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2023.08.6</version>
+  <version>BANK-VERSION-USING-2023.07.8</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2023.08.6</version>
+        <version>2023.07.8</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -193,6 +193,11 @@ Typically, not everything is needed.
     <dependency>
       <groupId>com.backbase.platform.edge.filters</groupId>
       <artifactId>validate-routes</artifactId>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.platform.edge.filters</groupId>
+      <artifactId>http-security-filter</artifactId>
       <type>jar</type>
     </dependency>
     <dependency>
@@ -569,27 +574,6 @@ Typically, not everything is needed.
       <groupId>org.keycloak</groupId>
       <artifactId>keycloak-integration-parent</artifactId>
       <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>event-bridge</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>event-bridge</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>event-bridge</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>event-bridge</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
     </dependency>
 <!-- end::identity-core-bom[] -->
 <!-- tag::token-converter-bom[] -->
@@ -1866,12 +1850,6 @@ Typically, not everything is needed.
       <artifactId>rtc</artifactId>
       <type>zip</type>
       <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.rtc</groupId>
-      <artifactId>rtc</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
     </dependency>
     <dependency>
       <groupId>com.backbase.rtc</groupId>
