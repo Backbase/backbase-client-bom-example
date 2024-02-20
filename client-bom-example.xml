@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2023.02.85-LTS</version>
+  <version>BANK-VERSION-USING-2023.02.86-LTS</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2023.02.85-LTS</version>
+        <version>2023.02.86-LTS</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -852,78 +852,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::cashflow-forecasting-bom[] -->
-<!-- tag::transaction-bom[] -->
-    <dependency>
-      <groupId>com.backbase.dbs.transaction</groupId>
-      <artifactId>transaction-manager</artifactId>
-      <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction</groupId>
-      <artifactId>transaction-manager</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction</groupId>
-      <artifactId>transaction-manager</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction</groupId>
-      <artifactId>transaction-manager</artifactId>
-      <type>zip</type>
-      <classifier>sql</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction</groupId>
-      <artifactId>transaction-manager</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction</groupId>
-      <artifactId>transaction-manager</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction</groupId>
-      <artifactId>transaction-manager</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
-      <artifactId>transaction-enricher</artifactId>
-      <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
-      <artifactId>transaction-enricher</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
-      <artifactId>transaction-enricher</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
-      <artifactId>transaction-enricher</artifactId>
-      <type>zip</type>
-      <classifier>sql</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
-      <artifactId>transaction-enricher</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
-      <artifactId>transaction-enricher</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::transaction-bom[] -->
 <!-- tag::engagements-bom[] -->
     <dependency>
       <groupId>com.backbase.engagement</groupId>
@@ -1034,6 +962,144 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::push-notifications-bom[] -->
+<!-- tag::access-control-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>access-control</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>access-control</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>access-control</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>access-control</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>access-control</artifactId>
+      <type>zip</type>
+      <classifier>sql</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>access-control</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>access-control</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>auth-security-dbs-accesscontrol</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>auth-security-dbs-accesscontrol</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration-service</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration-service</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration-service</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration-external-mock</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration-external-mock</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration-external-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration-external-mock</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration-external-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accessgroup</groupId>
+      <artifactId>accessgroup-integration-service</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accessgroup</groupId>
+      <artifactId>accessgroup-integration-service</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accessgroup</groupId>
+      <artifactId>accessgroup-integration-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accessgroup</groupId>
+      <artifactId>accessgroup-integration-service</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accessgroup</groupId>
+      <artifactId>accessgroup-integration-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>access-control-openapi-spec</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>access-control-openapi-spec</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>access-control-openapi-spec</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+<!-- end::access-control-bom[] -->
 <!-- tag::account-recovery-manager-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
@@ -2022,6 +2088,78 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::remote-deposit-capture-bom[] -->
+<!-- tag::transaction-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-manager</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-manager</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-manager</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-manager</artifactId>
+      <type>zip</type>
+      <classifier>sql</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-manager</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-manager</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-manager</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
+      <artifactId>transaction-enricher</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
+      <artifactId>transaction-enricher</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
+      <artifactId>transaction-enricher</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
+      <artifactId>transaction-enricher</artifactId>
+      <type>zip</type>
+      <classifier>sql</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
+      <artifactId>transaction-enricher</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
+      <artifactId>transaction-enricher</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::transaction-bom[] -->
 <!-- tag::action-bom[] -->
     <dependency>
       <groupId>com.backbase.dbs.actions</groupId>
@@ -2425,144 +2563,6 @@ Typically, not everything is needed.
       <classifier>api</classifier>
     </dependency>
 <!-- end::place-management-bom[] -->
-<!-- tag::access-control-bom[] -->
-    <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>access-control</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>access-control</artifactId>
-      <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>access-control</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>access-control</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>access-control</artifactId>
-      <type>zip</type>
-      <classifier>sql</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>access-control</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>access-control</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>auth-security-dbs-accesscontrol</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>auth-security-dbs-accesscontrol</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration-service</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration-service</artifactId>
-      <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration-service</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration-external-mock</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration-external-mock</artifactId>
-      <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration-external-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration-external-mock</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration-external-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accessgroup</groupId>
-      <artifactId>accessgroup-integration-service</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accessgroup</groupId>
-      <artifactId>accessgroup-integration-service</artifactId>
-      <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accessgroup</groupId>
-      <artifactId>accessgroup-integration-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accessgroup</groupId>
-      <artifactId>accessgroup-integration-service</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accessgroup</groupId>
-      <artifactId>accessgroup-integration-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>access-control-openapi-spec</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>access-control-openapi-spec</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>access-control-openapi-spec</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-<!-- end::access-control-bom[] -->
 <!-- tag::engagement-content-bom[] -->
     <dependency>
       <groupId>com.backbase.contentenricher</groupId>
