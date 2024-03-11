@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2023.09.46-LTS</version>
+  <version>BANK-VERSION-USING-2023.09.47-LTS</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2023.09.46-LTS</version>
+        <version>2023.09.47-LTS</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -372,40 +372,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::rtc-bom[] -->
-<!-- tag::notifications-bom[] -->
-    <dependency>
-      <groupId>com.backbase.dbs.notifications</groupId>
-      <artifactId>notifications-service</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.notifications</groupId>
-      <artifactId>notifications-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.notifications</groupId>
-      <artifactId>notifications-service</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.notifications</groupId>
-      <artifactId>notifications-service</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.notifications</groupId>
-      <artifactId>notifications-service</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.notifications</groupId>
-      <artifactId>notifications-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::notifications-bom[] -->
 <!-- tag::token-converter-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
@@ -534,24 +500,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::billpay-bom[] -->
-<!-- tag::remote-config-bom[] -->
-    <dependency>
-      <groupId>com.backbase.remoteconfig</groupId>
-      <artifactId>remote-config</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.remoteconfig</groupId>
-      <artifactId>remote-config</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.remoteconfig</groupId>
-      <artifactId>remote-config</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-<!-- end::remote-config-bom[] -->
 <!-- tag::document-storage-bom[] -->
     <dependency>
       <groupId>com.backbase.cxp</groupId>
@@ -1540,6 +1488,46 @@ Typically, not everything is needed.
       <classifier>sources</classifier>
     </dependency>
 <!-- end::limit-bom[] -->
+<!-- tag::confirmation-bom[] -->
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>confirmation</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>confirmation</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>confirmation</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>confirmation</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>transaction-signing-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>transaction-signing-mock</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>transaction-signing-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::confirmation-bom[] -->
 <!-- tag::engagements-bom[] -->
     <dependency>
       <groupId>com.backbase.engagement</groupId>
@@ -1590,46 +1578,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::engagements-bom[] -->
-<!-- tag::confirmation-bom[] -->
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>confirmation</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>confirmation</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>confirmation</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>confirmation</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>transaction-signing-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>transaction-signing-mock</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>transaction-signing-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::confirmation-bom[] -->
 <!-- tag::savvy-money-credit-scorer-bom[] -->
     <dependency>
       <groupId>com.backbase.credscr.savvymoney</groupId>
@@ -1998,6 +1946,80 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::provisioning-bom[] -->
+<!-- tag::notifications-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.notifications</groupId>
+      <artifactId>notifications-service</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.notifications</groupId>
+      <artifactId>notifications-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.notifications</groupId>
+      <artifactId>notifications-service</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.notifications</groupId>
+      <artifactId>notifications-service</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.notifications</groupId>
+      <artifactId>notifications-service</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.notifications</groupId>
+      <artifactId>notifications-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::notifications-bom[] -->
+<!-- tag::approval-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.approval</groupId>
+      <artifactId>approval-service</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.approval</groupId>
+      <artifactId>approval-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.approval</groupId>
+      <artifactId>approval-service</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.approval</groupId>
+      <artifactId>approval-service</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.approval</groupId>
+      <artifactId>approval-service</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.approval</groupId>
+      <artifactId>approval-service</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.approval</groupId>
+      <artifactId>approval-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::approval-bom[] -->
 <!-- tag::access-control-bom[] -->
     <dependency>
       <groupId>com.backbase.dbs.accesscontrol</groupId>
@@ -2362,46 +2384,6 @@ Typically, not everything is needed.
       <classifier>api</classifier>
     </dependency>
 <!-- end::consent-bom[] -->
-<!-- tag::approval-bom[] -->
-    <dependency>
-      <groupId>com.backbase.dbs.approval</groupId>
-      <artifactId>approval-service</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.approval</groupId>
-      <artifactId>approval-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.approval</groupId>
-      <artifactId>approval-service</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.approval</groupId>
-      <artifactId>approval-service</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.approval</groupId>
-      <artifactId>approval-service</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.approval</groupId>
-      <artifactId>approval-service</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.approval</groupId>
-      <artifactId>approval-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::approval-bom[] -->
 <!-- tag::web-authentication-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
@@ -2509,5 +2491,23 @@ Typically, not everything is needed.
       <artifactId>multi-context</artifactId>
     </dependency>
 <!-- end::products-bom[] -->
+<!-- tag::remote-config-bom[] -->
+    <dependency>
+      <groupId>com.backbase.remoteconfig</groupId>
+      <artifactId>remote-config</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.remoteconfig</groupId>
+      <artifactId>remote-config</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.remoteconfig</groupId>
+      <artifactId>remote-config</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+<!-- end::remote-config-bom[] -->
   </dependencies>
 </project>
