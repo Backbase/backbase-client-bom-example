@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2023.09.55-LTS</version>
+  <version>BANK-VERSION-USING-2023.09.56-LTS</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2023.09.55-LTS</version>
+        <version>2023.09.56-LTS</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -489,6 +489,54 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::external-account-aggregation-bom[] -->
+<!-- tag::document-storage-bom[] -->
+    <dependency>
+      <groupId>com.backbase.cxp</groupId>
+      <artifactId>contentservices</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.cxp</groupId>
+      <artifactId>contentservices</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.cxp</groupId>
+      <artifactId>contentservices</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>clamav-antivirus-connector</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>clamav-antivirus-connector</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>s3-storage-connector</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>s3-storage-connector</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>azure-blob-storage-connector</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>azure-blob-storage-connector</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::document-storage-bom[] -->
 <!-- tag::financial-insights-bom[] -->
     <dependency>
       <groupId>com.backbase.dbs.pfm</groupId>
@@ -599,60 +647,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::financial-insights-bom[] -->
-<!-- tag::limit-bom[] -->
-    <dependency>
-      <groupId>com.backbase.dbs.limit</groupId>
-      <artifactId>limit</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.limit</groupId>
-      <artifactId>limit</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.limit</groupId>
-      <artifactId>limit</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.limit</groupId>
-      <artifactId>limit</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.limit</groupId>
-      <artifactId>limit</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.limit</groupId>
-      <artifactId>limit</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.limit</groupId>
-      <artifactId>limit</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.limit</groupId>
-      <artifactId>limits-presentation-spi</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.limit</groupId>
-      <artifactId>limits-presentation-spi</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.limit</groupId>
-      <artifactId>limits-presentation-spi</artifactId>
-      <classifier>sources</classifier>
-    </dependency>
-<!-- end::limit-bom[] -->
 <!-- tag::engagement-content-bom[] -->
     <dependency>
       <groupId>com.backbase.contentenricher</groupId>
@@ -1213,54 +1207,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::push-notifications-bom[] -->
-<!-- tag::document-storage-bom[] -->
-    <dependency>
-      <groupId>com.backbase.cxp</groupId>
-      <artifactId>contentservices</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.cxp</groupId>
-      <artifactId>contentservices</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.cxp</groupId>
-      <artifactId>contentservices</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>clamav-antivirus-connector</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>clamav-antivirus-connector</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>s3-storage-connector</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>s3-storage-connector</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>azure-blob-storage-connector</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>azure-blob-storage-connector</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::document-storage-bom[] -->
 <!-- tag::message-delivery-bom[] -->
     <dependency>
       <groupId>com.backbase.communication</groupId>
@@ -1329,6 +1275,74 @@ Typically, not everything is needed.
       <artifactId>device-services-common</artifactId>
     </dependency>
 <!-- end::fido-bom[] -->
+<!-- tag::portfolio-bom[] -->
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>portfolio</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>portfolio-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>portfolio</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>portfolio-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>portfolio</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>portfolio</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+<!-- end::portfolio-bom[] -->
+<!-- tag::notifications-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.notifications</groupId>
+      <artifactId>notifications-service</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.notifications</groupId>
+      <artifactId>notifications-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.notifications</groupId>
+      <artifactId>notifications-service</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.notifications</groupId>
+      <artifactId>notifications-service</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.notifications</groupId>
+      <artifactId>notifications-service</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.notifications</groupId>
+      <artifactId>notifications-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::notifications-bom[] -->
 <!-- tag::identity-integration-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
@@ -1461,6 +1475,60 @@ Typically, not everything is needed.
       <type>jar</type>
     </dependency>
 <!-- end::edge-bom[] -->
+<!-- tag::limit-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.limit</groupId>
+      <artifactId>limit</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.limit</groupId>
+      <artifactId>limit</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.limit</groupId>
+      <artifactId>limit</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.limit</groupId>
+      <artifactId>limit</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.limit</groupId>
+      <artifactId>limit</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.limit</groupId>
+      <artifactId>limit</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.limit</groupId>
+      <artifactId>limit</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.limit</groupId>
+      <artifactId>limits-presentation-spi</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.limit</groupId>
+      <artifactId>limits-presentation-spi</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.limit</groupId>
+      <artifactId>limits-presentation-spi</artifactId>
+      <classifier>sources</classifier>
+    </dependency>
+<!-- end::limit-bom[] -->
 <!-- tag::device-management-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
@@ -1576,6 +1644,126 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::hard-token-integration-outbound-bom[] -->
+<!-- tag::identity-core-bom[] -->
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>auth-server</artifactId>
+      <type>zip</type>
+      <classifier>dist</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>auth-server</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>auth-server-themes</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>auth-server-providers</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>theme-archetype</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>backbase-identity-data</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-parent</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-common</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-admin-client</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-services</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-server-spi</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-server-spi-private</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-ldap-federation</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-kerberos-federation</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-model-pom</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-model-infinispan</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-model-legacy</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-model-legacy-private</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-model-legacy</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-model-legacy-private</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-integration-parent</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>event-bridge</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>event-bridge</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>event-bridge</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>event-bridge</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+<!-- end::identity-core-bom[] -->
 <!-- tag::account-recovery-manager-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
@@ -1734,40 +1922,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::loans-bom[] -->
-<!-- tag::portfolio-bom[] -->
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>portfolio</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>portfolio-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>portfolio</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>portfolio-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>portfolio</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>portfolio</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-<!-- end::portfolio-bom[] -->
 <!-- tag::remote-deposit-capture-bom[] -->
     <dependency>
       <groupId>com.backbase.dbs.rdc</groupId>
@@ -1820,126 +1974,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::identity-orchestration-bom[] -->
-<!-- tag::identity-core-bom[] -->
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>auth-server</artifactId>
-      <type>zip</type>
-      <classifier>dist</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>auth-server</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>auth-server-themes</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>auth-server-providers</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>theme-archetype</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>backbase-identity-data</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-parent</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-common</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-core</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-admin-client</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-services</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-server-spi</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-server-spi-private</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-ldap-federation</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-kerberos-federation</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-model-pom</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-model-infinispan</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-model-legacy</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-model-legacy-private</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-model-legacy</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-model-legacy-private</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-integration-parent</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>event-bridge</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>event-bridge</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>event-bridge</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>event-bridge</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-<!-- end::identity-core-bom[] -->
 <!-- tag::vendor-bom[] -->
     <dependency>
       <groupId>com.backbase.dbs.capabilities.extended</groupId>
@@ -2067,40 +2101,35 @@ Typically, not everything is needed.
       <classifier>api</classifier>
     </dependency>
 <!-- end::place-management-bom[] -->
-<!-- tag::notifications-bom[] -->
+<!-- tag::web-authentication-bom[] -->
     <dependency>
-      <groupId>com.backbase.dbs.notifications</groupId>
-      <artifactId>notifications-service</artifactId>
-      <type>pom</type>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>web-authentication</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.notifications</groupId>
-      <artifactId>notifications-service</artifactId>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>web-authentication</artifactId>
+      <classifier>classes</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.notifications</groupId>
-      <artifactId>notifications-service</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.notifications</groupId>
-      <artifactId>notifications-service</artifactId>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>web-authentication</artifactId>
       <type>zip</type>
       <classifier>api</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.notifications</groupId>
-      <artifactId>notifications-service</artifactId>
-      <classifier>classes</classifier>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>web-authentication</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.notifications</groupId>
-      <artifactId>notifications-service</artifactId>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>web-authentication</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
-<!-- end::notifications-bom[] -->
+<!-- end::web-authentication-bom[] -->
 <!-- tag::card-management-bom[] -->
     <dependency>
       <groupId>com.backbase.card</groupId>
@@ -2379,35 +2408,6 @@ Typically, not everything is needed.
       <classifier>api</classifier>
     </dependency>
 <!-- end::consent-bom[] -->
-<!-- tag::web-authentication-bom[] -->
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>web-authentication</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>web-authentication</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>web-authentication</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>web-authentication</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>web-authentication</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::web-authentication-bom[] -->
 <!-- tag::exchange-bom[] -->
     <dependency>
       <groupId>com.backbase.dbs.exchange</groupId>
