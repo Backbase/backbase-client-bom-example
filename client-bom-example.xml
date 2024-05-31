@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2024.03.18-LTS</version>
+  <version>BANK-VERSION-USING-2024.03.19-LTS</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2024.03.18-LTS</version>
+        <version>2024.03.19-LTS</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -901,6 +901,126 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::transaction-bom[] -->
+<!-- tag::identity-core-bom[] -->
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>auth-server</artifactId>
+      <type>zip</type>
+      <classifier>dist</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>auth-server</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>auth-server-themes</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>auth-server-providers</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>theme-archetype</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>backbase-identity-data</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-parent</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-common</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-admin-client</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-services</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-server-spi</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-server-spi-private</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-ldap-federation</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-kerberos-federation</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-model-pom</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-model-infinispan</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-model-legacy</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-model-legacy-private</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-model-legacy</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-model-legacy-private</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-integration-parent</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>event-bridge</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>event-bridge</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>event-bridge</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>event-bridge</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+<!-- end::identity-core-bom[] -->
 <!-- tag::confirmation-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
@@ -1417,126 +1537,6 @@ Typically, not everything is needed.
       <classifier>api</classifier>
     </dependency>
 <!-- end::access-control-bom[] -->
-<!-- tag::identity-core-bom[] -->
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>auth-server</artifactId>
-      <type>zip</type>
-      <classifier>dist</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>auth-server</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>auth-server-themes</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>auth-server-providers</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>theme-archetype</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>backbase-identity-data</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-parent</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-common</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-core</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-admin-client</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-services</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-server-spi</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-server-spi-private</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-ldap-federation</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-kerberos-federation</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-model-pom</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-model-infinispan</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-model-legacy</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-model-legacy-private</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-model-legacy</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-model-legacy-private</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-integration-parent</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>event-bridge</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>event-bridge</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>event-bridge</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>event-bridge</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-<!-- end::identity-core-bom[] -->
 <!-- tag::rtc-bom[] -->
     <dependency>
       <groupId>com.backbase.rtc</groupId>
