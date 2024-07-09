@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2023.09.75-LTS</version>
+  <version>BANK-VERSION-USING-2023.09.76-LTS</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2023.09.75-LTS</version>
+        <version>2023.09.76-LTS</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -270,54 +270,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::external-account-aggregation-bom[] -->
-<!-- tag::document-storage-bom[] -->
-    <dependency>
-      <groupId>com.backbase.cxp</groupId>
-      <artifactId>contentservices</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.cxp</groupId>
-      <artifactId>contentservices</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.cxp</groupId>
-      <artifactId>contentservices</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>clamav-antivirus-connector</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>clamav-antivirus-connector</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>s3-storage-connector</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>s3-storage-connector</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>azure-blob-storage-connector</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>azure-blob-storage-connector</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::document-storage-bom[] -->
 <!-- tag::financial-insights-bom[] -->
     <dependency>
       <groupId>com.backbase.dbs.pfm</groupId>
@@ -674,62 +626,6 @@ Typically, not everything is needed.
       <classifier>api</classifier>
     </dependency>
 <!-- end::mobile-authentication-bom[] -->
-<!-- tag::billpay-bom[] -->
-    <dependency>
-      <groupId>com.backbase.dbs.billpay</groupId>
-      <artifactId>billpay-integrator</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.billpay</groupId>
-      <artifactId>billpay-integrator</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.billpay</groupId>
-      <artifactId>billpay-integrator</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.billpay</groupId>
-      <artifactId>billpay-integrator</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.billpay</groupId>
-      <artifactId>billpay-integrator</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.billpay</groupId>
-      <artifactId>billpay-integrator</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.capabilities.extended</groupId>
-      <artifactId>billpay-integration-payveris-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.capabilities.extended</groupId>
-      <artifactId>billpay-integration-payveris-service</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.capabilities.extended</groupId>
-      <artifactId>billpay-integration-payveris-service</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.capabilities.extended</groupId>
-      <artifactId>billpay-integration-payveris-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::billpay-bom[] -->
 <!-- tag::cashflow-forecasting-bom[] -->
     <dependency>
       <groupId>com.backbase.dbs.cashflow</groupId>
@@ -930,59 +826,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::positive-pay-bom[] -->
-<!-- tag::audit-bom[] -->
-    <dependency>
-      <groupId>com.backbase.dbs.audit</groupId>
-      <artifactId>audit-spec</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.audit</groupId>
-      <artifactId>audit-spec</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.audit</groupId>
-      <artifactId>audit-spec</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.audit</groupId>
-      <artifactId>audit-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.audit</groupId>
-      <artifactId>audit-service</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.audit</groupId>
-      <artifactId>audit-service</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.audit</groupId>
-      <artifactId>audit-client</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>audit-mass-indexer-agent</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>audit-mass-indexer-agent</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>audit-mass-indexer-agent</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-<!-- end::audit-bom[] -->
 <!-- tag::engagement-content-bom[] -->
     <dependency>
       <groupId>com.backbase.contentenricher</groupId>
@@ -1271,6 +1114,54 @@ Typically, not everything is needed.
       <classifier>liquibase</classifier>
     </dependency>
 <!-- end::savvy-money-credit-scorer-bom[] -->
+<!-- tag::document-storage-bom[] -->
+    <dependency>
+      <groupId>com.backbase.cxp</groupId>
+      <artifactId>contentservices</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.cxp</groupId>
+      <artifactId>contentservices</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.cxp</groupId>
+      <artifactId>contentservices</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>clamav-antivirus-connector</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>clamav-antivirus-connector</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>s3-storage-connector</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>s3-storage-connector</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>azure-blob-storage-connector</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>azure-blob-storage-connector</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::document-storage-bom[] -->
 <!-- tag::fido-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
@@ -2217,6 +2108,59 @@ Typically, not everything is needed.
       <classifier>api</classifier>
     </dependency>
 <!-- end::place-management-bom[] -->
+<!-- tag::audit-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.audit</groupId>
+      <artifactId>audit-spec</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.audit</groupId>
+      <artifactId>audit-spec</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.audit</groupId>
+      <artifactId>audit-spec</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.audit</groupId>
+      <artifactId>audit-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.audit</groupId>
+      <artifactId>audit-service</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.audit</groupId>
+      <artifactId>audit-service</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.audit</groupId>
+      <artifactId>audit-client</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>audit-mass-indexer-agent</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>audit-mass-indexer-agent</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>audit-mass-indexer-agent</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+<!-- end::audit-bom[] -->
 <!-- tag::card-management-bom[] -->
     <dependency>
       <groupId>com.backbase.card</groupId>
@@ -2246,6 +2190,62 @@ Typically, not everything is needed.
       <classifier>api</classifier>
     </dependency>
 <!-- end::card-management-bom[] -->
+<!-- tag::billpay-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.billpay</groupId>
+      <artifactId>billpay-integrator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.billpay</groupId>
+      <artifactId>billpay-integrator</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.billpay</groupId>
+      <artifactId>billpay-integrator</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.billpay</groupId>
+      <artifactId>billpay-integrator</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.billpay</groupId>
+      <artifactId>billpay-integrator</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.billpay</groupId>
+      <artifactId>billpay-integrator</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.capabilities.extended</groupId>
+      <artifactId>billpay-integration-payveris-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.capabilities.extended</groupId>
+      <artifactId>billpay-integration-payveris-service</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.capabilities.extended</groupId>
+      <artifactId>billpay-integration-payveris-service</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.capabilities.extended</groupId>
+      <artifactId>billpay-integration-payveris-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::billpay-bom[] -->
 <!-- tag::contacts-bom[] -->
     <dependency>
       <groupId>com.backbase.dbs.contact</groupId>
