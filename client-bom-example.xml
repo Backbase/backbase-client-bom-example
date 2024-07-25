@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2024.03.39-LTS</version>
+  <version>BANK-VERSION-USING-2024.03.40-LTS</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2024.03.39-LTS</version>
+        <version>2024.03.40-LTS</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -678,56 +678,6 @@ Typically, not everything is needed.
       <classifier>events</classifier>
     </dependency>
 <!-- end::engagement-content-bom[] -->
-<!-- tag::engagements-bom[] -->
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>realtime-engagement-orchestrator</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>realtime-engagement-orchestrator</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>realtime-engagement-orchestrator</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::engagements-bom[] -->
 <!-- tag::dashboard-bom[] -->
     <dependency>
       <groupId>com.backbase.dashboard</groupId>
@@ -1065,6 +1015,45 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::provisioning-bom[] -->
+<!-- tag::push-notifications-bom[] -->
+    <dependency>
+      <groupId>com.backbase.services.mobile</groupId>
+      <artifactId>push-integration</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.services.mobile</groupId>
+      <artifactId>push-integration-service</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.services.mobile</groupId>
+      <artifactId>push-integration-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.services.mobile</groupId>
+      <artifactId>push-integration-service</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.services.mobile</groupId>
+      <artifactId>push-integration-service</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.services.mobile</groupId>
+      <artifactId>push-integration-service</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.services.mobile</groupId>
+      <artifactId>push-integration-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::push-notifications-bom[] -->
 <!-- tag::confirmation-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
@@ -1105,45 +1094,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::confirmation-bom[] -->
-<!-- tag::push-notifications-bom[] -->
-    <dependency>
-      <groupId>com.backbase.services.mobile</groupId>
-      <artifactId>push-integration</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.services.mobile</groupId>
-      <artifactId>push-integration-service</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.services.mobile</groupId>
-      <artifactId>push-integration-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.services.mobile</groupId>
-      <artifactId>push-integration-service</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.services.mobile</groupId>
-      <artifactId>push-integration-service</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.services.mobile</groupId>
-      <artifactId>push-integration-service</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.services.mobile</groupId>
-      <artifactId>push-integration-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::push-notifications-bom[] -->
 <!-- tag::self-enrollment-support-api-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
@@ -1382,6 +1332,54 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::web-authentication-bom[] -->
+<!-- tag::message-delivery-bom[] -->
+    <dependency>
+      <groupId>com.backbase.communication</groupId>
+      <artifactId>communication</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.communication</groupId>
+      <artifactId>communication</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.communication</groupId>
+      <artifactId>communication</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.communication</groupId>
+      <artifactId>communication</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.buildingblocks</groupId>
+      <artifactId>communication-channel</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.communication</groupId>
+      <artifactId>engage-sms-connector</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.communication</groupId>
+      <artifactId>engage-sms-connector</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.communication</groupId>
+      <artifactId>smtp-email-connector</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.communication</groupId>
+      <artifactId>smtp-email-connector</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::message-delivery-bom[] -->
 <!-- tag::external-account-aggregation-bom[] -->
     <dependency>
       <groupId>com.backbase.eaa.aggregation</groupId>
@@ -1723,54 +1721,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::billpay-bom[] -->
-<!-- tag::message-delivery-bom[] -->
-    <dependency>
-      <groupId>com.backbase.communication</groupId>
-      <artifactId>communication</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.communication</groupId>
-      <artifactId>communication</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.communication</groupId>
-      <artifactId>communication</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.communication</groupId>
-      <artifactId>communication</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.buildingblocks</groupId>
-      <artifactId>communication-channel</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.communication</groupId>
-      <artifactId>engage-sms-connector</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.communication</groupId>
-      <artifactId>engage-sms-connector</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.communication</groupId>
-      <artifactId>smtp-email-connector</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.communication</groupId>
-      <artifactId>smtp-email-connector</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::message-delivery-bom[] -->
 <!-- tag::audit-bom[] -->
     <dependency>
       <groupId>com.backbase.dbs.audit</groupId>
@@ -1935,6 +1885,56 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::account-statements-bom[] -->
+<!-- tag::engagements-bom[] -->
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>realtime-engagement-orchestrator</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>realtime-engagement-orchestrator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>realtime-engagement-orchestrator</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::engagements-bom[] -->
 <!-- tag::edge-bom[] -->
     <dependency>
       <groupId>com.backbase.platform</groupId>
