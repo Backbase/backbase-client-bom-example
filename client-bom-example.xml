@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2024.03.43-LTS</version>
+  <version>BANK-VERSION-USING-2024.03.44-LTS</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2024.03.43-LTS</version>
+        <version>2024.03.44-LTS</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -175,46 +175,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::service-discovery-bom[] -->
-<!-- tag::metrics-bom[] -->
-    <dependency>
-      <groupId>com.backbase.metrics</groupId>
-      <artifactId>metric</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.metrics</groupId>
-      <artifactId>metric</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.metrics</groupId>
-      <artifactId>metric</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.metrics</groupId>
-      <artifactId>metric</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.metrics</groupId>
-      <artifactId>metric</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.metrics</groupId>
-      <artifactId>metric</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.metrics</groupId>
-      <artifactId>metric</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::metrics-bom[] -->
 <!-- tag::exchange-bom[] -->
     <dependency>
       <groupId>com.backbase.dbs.exchange</groupId>
@@ -512,47 +472,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::notifications-bom[] -->
-<!-- tag::remote-config-bom[] -->
-    <dependency>
-      <groupId>com.backbase.remoteconfig</groupId>
-      <artifactId>remote-config</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.remoteconfig</groupId>
-      <artifactId>remote-config</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.remoteconfig</groupId>
-      <artifactId>remote-config</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-<!-- end::remote-config-bom[] -->
-<!-- tag::bank-calendar-bom[] -->
-    <dependency>
-      <groupId>com.backbase.calendar</groupId>
-      <artifactId>bank-calendar</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.calendar</groupId>
-      <artifactId>bank-calendar</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.calendar</groupId>
-      <artifactId>bank-calendar</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.calendar</groupId>
-      <artifactId>bank-calendar</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::bank-calendar-bom[] -->
 <!-- tag::payments-bom[] -->
     <dependency>
       <groupId>com.backbase.dbs.paymentorder</groupId>
@@ -662,6 +581,82 @@ Typically, not everything is needed.
       <classifier>api</classifier>
     </dependency>
 <!-- end::payments-bom[] -->
+<!-- tag::positive-pay-bom[] -->
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-check</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-check</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-check</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-check</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-check</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-integration-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-integration-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-ach</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-ach</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-ach</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-ach</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-ach</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-ach-integration-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-ach-integration-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::positive-pay-bom[] -->
 <!-- tag::device-management-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
@@ -1015,6 +1010,29 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::user-lifecycle-bom[] -->
+<!-- tag::bank-calendar-bom[] -->
+    <dependency>
+      <groupId>com.backbase.calendar</groupId>
+      <artifactId>bank-calendar</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.calendar</groupId>
+      <artifactId>bank-calendar</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.calendar</groupId>
+      <artifactId>bank-calendar</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.calendar</groupId>
+      <artifactId>bank-calendar</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::bank-calendar-bom[] -->
 <!-- tag::document-storage-bom[] -->
     <dependency>
       <groupId>com.backbase.cxp</groupId>
@@ -1643,52 +1661,6 @@ Typically, not everything is needed.
       <classifier>api</classifier>
     </dependency>
 <!-- end::access-control-bom[] -->
-<!-- tag::rtc-bom[] -->
-    <dependency>
-      <groupId>com.backbase.rtc</groupId>
-      <artifactId>rtc</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.rtc</groupId>
-      <artifactId>rtc</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.rtc</groupId>
-      <artifactId>rtc</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.rtc</groupId>
-      <artifactId>rtc</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.rtc</groupId>
-      <artifactId>rtc</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.rtc</groupId>
-      <artifactId>rtc-twilio-integrator</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.rtc</groupId>
-      <artifactId>rtc-twilio-integrator</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.rtc</groupId>
-      <artifactId>rtc-twilio-integrator</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::rtc-bom[] -->
 <!-- tag::billpay-bom[] -->
     <dependency>
       <groupId>com.backbase.dbs.billpay</groupId>
@@ -1745,6 +1717,112 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::billpay-bom[] -->
+<!-- tag::rtc-bom[] -->
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc-twilio-integrator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc-twilio-integrator</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc-twilio-integrator</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::rtc-bom[] -->
+<!-- tag::cashflow-forecasting-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.cashflow</groupId>
+      <artifactId>cashflow-service</artifactId>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.cashflow</groupId>
+      <artifactId>cashflow-service</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.cashflow</groupId>
+      <artifactId>cashflow-service</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.cashflow</groupId>
+      <artifactId>cashflow-service</artifactId>
+      <type>jar</type>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.cashflow</groupId>
+      <artifactId>cashflow-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.cashflow</groupId>
+      <artifactId>accounting-integration-service</artifactId>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.cashflow</groupId>
+      <artifactId>accounting-integration-service</artifactId>
+      <type>jar</type>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.cashflow</groupId>
+      <artifactId>accounting-integration-service</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.cashflow</groupId>
+      <artifactId>accounting-integration-service</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.cashflow</groupId>
+      <artifactId>accounting-integration-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::cashflow-forecasting-bom[] -->
 <!-- tag::audit-bom[] -->
     <dependency>
       <groupId>com.backbase.dbs.audit</groupId>
@@ -1794,82 +1872,6 @@ Typically, not everything is needed.
       <classifier>liquibase</classifier>
     </dependency>
 <!-- end::audit-bom[] -->
-<!-- tag::positive-pay-bom[] -->
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-check</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-check</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-check</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-check</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-check</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-integration-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-integration-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-ach</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-ach</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-ach</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-ach</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-ach</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-ach-integration-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-ach-integration-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::positive-pay-bom[] -->
 <!-- tag::account-statements-bom[] -->
     <dependency>
       <groupId>com.backbase.dbs.account</groupId>
@@ -2305,66 +2307,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::batches-bom[] -->
-<!-- tag::cashflow-forecasting-bom[] -->
-    <dependency>
-      <groupId>com.backbase.dbs.cashflow</groupId>
-      <artifactId>cashflow-service</artifactId>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.cashflow</groupId>
-      <artifactId>cashflow-service</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.cashflow</groupId>
-      <artifactId>cashflow-service</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.cashflow</groupId>
-      <artifactId>cashflow-service</artifactId>
-      <type>jar</type>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.cashflow</groupId>
-      <artifactId>cashflow-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.cashflow</groupId>
-      <artifactId>accounting-integration-service</artifactId>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.cashflow</groupId>
-      <artifactId>accounting-integration-service</artifactId>
-      <type>jar</type>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.cashflow</groupId>
-      <artifactId>accounting-integration-service</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.cashflow</groupId>
-      <artifactId>accounting-integration-service</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.cashflow</groupId>
-      <artifactId>accounting-integration-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::cashflow-forecasting-bom[] -->
 <!-- tag::fido-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
@@ -2512,6 +2454,64 @@ Typically, not everything is needed.
       <classifier>api</classifier>
     </dependency>
 <!-- end::consent-bom[] -->
+<!-- tag::metrics-bom[] -->
+    <dependency>
+      <groupId>com.backbase.metrics</groupId>
+      <artifactId>metric</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.metrics</groupId>
+      <artifactId>metric</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.metrics</groupId>
+      <artifactId>metric</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.metrics</groupId>
+      <artifactId>metric</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.metrics</groupId>
+      <artifactId>metric</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.metrics</groupId>
+      <artifactId>metric</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.metrics</groupId>
+      <artifactId>metric</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::metrics-bom[] -->
+<!-- tag::remote-config-bom[] -->
+    <dependency>
+      <groupId>com.backbase.remoteconfig</groupId>
+      <artifactId>remote-config</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.remoteconfig</groupId>
+      <artifactId>remote-config</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.remoteconfig</groupId>
+      <artifactId>remote-config</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+<!-- end::remote-config-bom[] -->
 <!-- tag::hard-token-integration-outbound-bom[] -->
     <dependency>
       <groupId>com.backbase.identity.hardtoken</groupId>
