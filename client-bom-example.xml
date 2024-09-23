@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2023.09.91-LTS</version>
+  <version>BANK-VERSION-USING-2023.09.92-LTS</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2023.09.91-LTS</version>
+        <version>2023.09.92-LTS</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -103,45 +103,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::billpay-bom[] -->
-<!-- tag::loans-bom[] -->
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan-integration-outbound-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan-integration-outbound-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::loans-bom[] -->
 <!-- tag::device-management-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
@@ -439,31 +400,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::employee-bom[] -->
-<!-- tag::token-converter-bom[] -->
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>platform-starter-token-converter</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>oidc-token-converter-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>oidc-token-converter-service</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>oidc-token-converter-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>token-converter-service-archetype</artifactId>
-    </dependency>
-<!-- end::token-converter-bom[] -->
 <!-- tag::message-delivery-bom[] -->
     <dependency>
       <groupId>com.backbase.communication</groupId>
@@ -541,6 +477,31 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::push-notifications-bom[] -->
+<!-- tag::token-converter-bom[] -->
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>platform-starter-token-converter</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>oidc-token-converter-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>oidc-token-converter-service</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>oidc-token-converter-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>token-converter-service-archetype</artifactId>
+    </dependency>
+<!-- end::token-converter-bom[] -->
 <!-- tag::savvy-money-credit-scorer-bom[] -->
     <dependency>
       <groupId>com.backbase.credscr.savvymoney</groupId>
@@ -945,6 +906,45 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::user-lifecycle-bom[] -->
+<!-- tag::loans-bom[] -->
+    <dependency>
+      <groupId>com.backbase.loan</groupId>
+      <artifactId>loan</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan</groupId>
+      <artifactId>loan</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan</groupId>
+      <artifactId>loan</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan</groupId>
+      <artifactId>loan</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan</groupId>
+      <artifactId>loan-integration-outbound-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan</groupId>
+      <artifactId>loan</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan</groupId>
+      <artifactId>loan-integration-outbound-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::loans-bom[] -->
 <!-- tag::identity-integration-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
