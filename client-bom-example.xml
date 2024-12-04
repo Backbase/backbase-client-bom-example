@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2023.09.100-LTS</version>
+  <version>BANK-VERSION-USING-2024.12.4</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2023.09.100-LTS</version>
+        <version>2024.12.4</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -47,62 +47,939 @@ Listing all the artifacts for all the capabilities in the Backbase bom.
 Typically, not everything is needed.
  -->
   <dependencies>
-<!-- tag::billpay-bom[] -->
+<!-- tag::batches-bom[] -->
     <dependency>
-      <groupId>com.backbase.dbs.billpay</groupId>
-      <artifactId>billpay-integrator</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.billpay</groupId>
-      <artifactId>billpay-integrator</artifactId>
+      <groupId>com.backbase.batch</groupId>
+      <artifactId>payment-batch</artifactId>
       <classifier>classes</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.billpay</groupId>
-      <artifactId>billpay-integrator</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
+      <groupId>com.backbase.batch.nacha</groupId>
+      <artifactId>nacha-writer</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.billpay</groupId>
-      <artifactId>billpay-integrator</artifactId>
+      <groupId>com.backbase.mandate</groupId>
+      <artifactId>mandate-manager</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.batch</groupId>
+      <artifactId>payment-batch</artifactId>
       <type>zip</type>
       <classifier>api</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.billpay</groupId>
-      <artifactId>billpay-integrator</artifactId>
+      <groupId>com.backbase.mandate</groupId>
+      <artifactId>mandate-manager</artifactId>
       <type>zip</type>
-      <classifier>events</classifier>
+      <classifier>api</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.billpay</groupId>
-      <artifactId>billpay-integrator</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.capabilities.extended</groupId>
-      <artifactId>billpay-integration-payveris-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.capabilities.extended</groupId>
-      <artifactId>billpay-integration-payveris-service</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.capabilities.extended</groupId>
-      <artifactId>billpay-integration-payveris-service</artifactId>
+      <groupId>com.backbase.batch</groupId>
+      <artifactId>payment-batch</artifactId>
       <type>zip</type>
       <classifier>liquibase</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.capabilities.extended</groupId>
-      <artifactId>billpay-integration-payveris-service</artifactId>
+      <groupId>com.backbase.mandate</groupId>
+      <artifactId>mandate-manager</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.batch</groupId>
+      <artifactId>payment-batch</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.batch</groupId>
+      <artifactId>payment-batch</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.batch</groupId>
+      <artifactId>payment-batch-core-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.mandate</groupId>
+      <artifactId>mandate-manager</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.batch</groupId>
+      <artifactId>payment-batch</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
-<!-- end::billpay-bom[] -->
+    <dependency>
+      <groupId>com.backbase.batch</groupId>
+      <artifactId>payment-batch-core-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.mandate</groupId>
+      <artifactId>mandate-manager</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::batches-bom[] -->
+<!-- tag::engagement-content-bom[] -->
+    <dependency>
+      <groupId>com.backbase.contentenricher</groupId>
+      <artifactId>content-enricher</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.contentenricher</groupId>
+      <artifactId>content-enricher</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.contentenricher</groupId>
+      <artifactId>content-enricher</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.contentenricher</groupId>
+      <artifactId>content-enricher</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.contentenricher</groupId>
+      <artifactId>content-enricher</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+<!-- end::engagement-content-bom[] -->
+<!-- tag::questionnaire-bom[] -->
+    <dependency>
+      <groupId>com.backbase.lending.questionnaire</groupId>
+      <artifactId>questionnaire</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.lending.questionnaire</groupId>
+      <artifactId>questionnaire</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.lending.questionnaire</groupId>
+      <artifactId>questionnaire</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.lending.questionnaire</groupId>
+      <artifactId>questionnaire</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::questionnaire-bom[] -->
+<!-- tag::enrollment-support-integration-bom[] -->
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>enrollment-support-integration</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>enrollment-support-integration</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>enrollment-support-integration</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::enrollment-support-integration-bom[] -->
+<!-- tag::positive-pay-bom[] -->
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-check</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-check</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-check</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-check</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-check</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-integration-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-integration-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-ach</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-ach</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-ach</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-ach</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-ach</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-ach-integration-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-ach-integration-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::positive-pay-bom[] -->
+<!-- tag::rtc-bom[] -->
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc-twilio-integrator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc-twilio-integrator</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.rtc</groupId>
+      <artifactId>rtc-twilio-integrator</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::rtc-bom[] -->
+<!-- tag::hard-token-integration-outbound-bom[] -->
+    <dependency>
+      <groupId>com.backbase.identity.hardtoken</groupId>
+      <artifactId>hard-token-integration-outbound-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity.hardtoken</groupId>
+      <artifactId>hard-token-integration-outbound-mock</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity.hardtoken</groupId>
+      <artifactId>hard-token-integration-outbound-mock</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity.hardtoken</groupId>
+      <artifactId>hard-token-integration-outbound-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::hard-token-integration-outbound-bom[] -->
+<!-- tag::vendor-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.capabilities.extended</groupId>
+      <artifactId>payveris-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.vendor</groupId>
+      <artifactId>payveris</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.vendor</groupId>
+      <artifactId>customer-provider-integrator</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.vendor</groupId>
+      <artifactId>payveris</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.vendor</groupId>
+      <artifactId>payveris</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.vendor</groupId>
+      <artifactId>payveris</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.vendor</groupId>
+      <artifactId>payveris-p2p-integrator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.vendor</groupId>
+      <artifactId>payveris-p2p-integrator</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.vendor</groupId>
+      <artifactId>payveris-integration-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.vendor</groupId>
+      <artifactId>payveris-integration-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.vendor</groupId>
+      <artifactId>payveris-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.vendor</groupId>
+      <artifactId>payveris-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.vendor</groupId>
+      <artifactId>customer-provider-integrator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.vendor</groupId>
+      <artifactId>customer-provider-integrator</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.vendor</groupId>
+      <artifactId>customer-provider-integrator</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+<!-- end::vendor-bom[] -->
+<!-- tag::communications-outbound-integration-bom[] -->
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>communications-outbound-integration-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>communications-outbound-integration-mock</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>communications-outbound-integration-mock</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>communications-outbound-integration-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::communications-outbound-integration-bom[] -->
+<!-- tag::transaction-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-manager</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-manager</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-manager</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-manager</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-manager</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-manager</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
+      <artifactId>transaction-enricher</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
+      <artifactId>transaction-enricher</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
+      <artifactId>transaction-enricher</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
+      <artifactId>transaction-enricher</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
+      <artifactId>transaction-enricher</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
+      <artifactId>transaction-enricher</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-integration</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-integration</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-integration</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::transaction-bom[] -->
+<!-- tag::dashboard-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dashboard</groupId>
+      <artifactId>dashboard</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dashboard</groupId>
+      <artifactId>dashboard</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dashboard</groupId>
+      <artifactId>dashboard</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dashboard</groupId>
+      <artifactId>dashboard</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dashboard</groupId>
+      <artifactId>dashboard</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::dashboard-bom[] -->
+<!-- tag::exchange-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.exchange</groupId>
+      <artifactId>exchange-integration-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.exchange</groupId>
+      <artifactId>exchange-integration-service</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.exchange</groupId>
+      <artifactId>exchange-integration-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::exchange-bom[] -->
+<!-- tag::engagements-bom[] -->
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>realtime-engagement-orchestrator</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>realtime-engagement-orchestrator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>realtime-engagement-orchestrator</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::engagements-bom[] -->
+<!-- tag::bank-calendar-bom[] -->
+    <dependency>
+      <groupId>com.backbase.calendar</groupId>
+      <artifactId>bank-calendar</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.calendar</groupId>
+      <artifactId>bank-calendar</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.calendar</groupId>
+      <artifactId>bank-calendar</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.calendar</groupId>
+      <artifactId>bank-calendar</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::bank-calendar-bom[] -->
+<!-- tag::content-cards-bom[] -->
+    <dependency>
+      <groupId>com.backbase.contentcard</groupId>
+      <artifactId>content-card</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.contentcard</groupId>
+      <artifactId>content-card</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.contentcard</groupId>
+      <artifactId>content-card</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.contentcard</groupId>
+      <artifactId>content-card</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.contentcard</groupId>
+      <artifactId>content-card</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+<!-- end::content-cards-bom[] -->
+<!-- tag::fido-bom[] -->
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>fido-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>fido-service</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>fido-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>device-management-model-admin</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>device-management-model-fido</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>device-services-common</artifactId>
+    </dependency>
+<!-- end::fido-bom[] -->
+<!-- tag::portfolio-bom[] -->
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>portfolio</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>portfolio-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>portfolio</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>portfolio-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>portfolio</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>portfolio</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+<!-- end::portfolio-bom[] -->
+<!-- tag::comments-bom[] -->
+    <dependency>
+      <groupId>com.backbase.comments</groupId>
+      <artifactId>comments</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.comments</groupId>
+      <artifactId>comments</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.comments</groupId>
+      <artifactId>comments</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.comments</groupId>
+      <artifactId>comments-starter</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.comments</groupId>
+      <artifactId>comments</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::comments-bom[] -->
+<!-- tag::identity-integration-bom[] -->
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>identity-integration-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>identity-integration-service</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>identity-integration-service</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>identity-integration-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::identity-integration-bom[] -->
+<!-- tag::message-delivery-bom[] -->
+    <dependency>
+      <groupId>com.backbase.communication</groupId>
+      <artifactId>communication</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.communication</groupId>
+      <artifactId>communication</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.communication</groupId>
+      <artifactId>communication</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.communication</groupId>
+      <artifactId>communication</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.buildingblocks</groupId>
+      <artifactId>communication-channel</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.communication</groupId>
+      <artifactId>engage-sms-connector</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.communication</groupId>
+      <artifactId>engage-sms-connector</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.communication</groupId>
+      <artifactId>smtp-email-connector</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.communication</groupId>
+      <artifactId>smtp-email-connector</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::message-delivery-bom[] -->
+<!-- tag::web-authentication-bom[] -->
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>web-authentication</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>web-authentication</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>web-authentication</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>web-authentication</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>web-authentication</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::web-authentication-bom[] -->
+<!-- tag::service-discovery-bom[] -->
+    <dependency>
+      <groupId>com.backbase.infra</groupId>
+      <artifactId>registry</artifactId>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.infra</groupId>
+      <artifactId>registry</artifactId>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.infra</groupId>
+      <artifactId>registry</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::service-discovery-bom[] -->
+<!-- tag::messages-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.messages</groupId>
+      <artifactId>messages-service</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.messages</groupId>
+      <artifactId>messages-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.messages</groupId>
+      <artifactId>messages-service</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.messages</groupId>
+      <artifactId>messages-service</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.messages</groupId>
+      <artifactId>messages-service</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.messages</groupId>
+      <artifactId>messages-service</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.messages</groupId>
+      <artifactId>messages-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::messages-bom[] -->
+<!-- tag::self-enrollment-support-api-bom[] -->
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>enrollment-support-service-api</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>enrollment-support-service-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>enrollment-support-service-mock</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>enrollment-support-service-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::self-enrollment-support-api-bom[] -->
+<!-- tag::account-statements-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.account</groupId>
+      <artifactId>account-statement</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.account</groupId>
+      <artifactId>account-statement</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.account</groupId>
+      <artifactId>account-statement</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.account</groupId>
+      <artifactId>account-statement</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.account</groupId>
+      <artifactId>account-statement</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.account</groupId>
+      <artifactId>account-statement-integration-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.account</groupId>
+      <artifactId>account-statement-integration-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::account-statements-bom[] -->
 <!-- tag::contacts-bom[] -->
     <dependency>
       <groupId>com.backbase.dbs.contact</groupId>
@@ -137,91 +1014,291 @@ Typically, not everything is needed.
       <type>zip</type>
       <classifier>liquibase</classifier>
     </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.contact</groupId>
+      <artifactId>beneficiary-validation-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.contact</groupId>
+      <artifactId>beneficiary-validation-service</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.contact</groupId>
+      <artifactId>beneficiary-validation-service</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.contact</groupId>
+      <artifactId>beneficiary-validation-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
 <!-- end::contacts-bom[] -->
-<!-- tag::device-management-bom[] -->
+<!-- tag::mobile-authentication-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
-      <artifactId>device-management-service</artifactId>
+      <artifactId>mobile-authentication</artifactId>
     </dependency>
     <dependency>
       <groupId>com.backbase.identity</groupId>
-      <artifactId>device-management-service</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>device-management-service</artifactId>
+      <artifactId>mobile-authentication</artifactId>
       <type>zip</type>
       <classifier>api</classifier>
     </dependency>
     <dependency>
       <groupId>com.backbase.identity</groupId>
-      <artifactId>device-management-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::device-management-bom[] -->
-<!-- tag::cashflow-forecasting-bom[] -->
-    <dependency>
-      <groupId>com.backbase.dbs.cashflow</groupId>
-      <artifactId>cashflow-service</artifactId>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.cashflow</groupId>
-      <artifactId>cashflow-service</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.cashflow</groupId>
-      <artifactId>cashflow-service</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.cashflow</groupId>
-      <artifactId>cashflow-service</artifactId>
-      <type>jar</type>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.cashflow</groupId>
-      <artifactId>cashflow-service</artifactId>
+      <artifactId>mobile-authentication</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.cashflow</groupId>
-      <artifactId>accounting-integration-service</artifactId>
-      <type>jar</type>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>passcode-validation-extension-service-api</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+<!-- end::mobile-authentication-bom[] -->
+<!-- tag::limit-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.limit</groupId>
+      <artifactId>limit</artifactId>
+      <type>pom</type>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.cashflow</groupId>
-      <artifactId>accounting-integration-service</artifactId>
-      <type>jar</type>
+      <groupId>com.backbase.dbs.limit</groupId>
+      <artifactId>limit</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.limit</groupId>
+      <artifactId>limit</artifactId>
       <classifier>classes</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.cashflow</groupId>
-      <artifactId>accounting-integration-service</artifactId>
+      <groupId>com.backbase.dbs.limit</groupId>
+      <artifactId>limit</artifactId>
       <type>zip</type>
       <classifier>api</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.cashflow</groupId>
-      <artifactId>accounting-integration-service</artifactId>
+      <groupId>com.backbase.dbs.limit</groupId>
+      <artifactId>limit</artifactId>
       <type>zip</type>
       <classifier>events</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.cashflow</groupId>
-      <artifactId>accounting-integration-service</artifactId>
+      <groupId>com.backbase.dbs.limit</groupId>
+      <artifactId>limit</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.limit</groupId>
+      <artifactId>limit</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
-<!-- end::cashflow-forecasting-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.limit</groupId>
+      <artifactId>limits-presentation-spi</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.limit</groupId>
+      <artifactId>limits-presentation-spi</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.limit</groupId>
+      <artifactId>limits-presentation-spi</artifactId>
+      <classifier>sources</classifier>
+    </dependency>
+<!-- end::limit-bom[] -->
+<!-- tag::user-profile-integration-bom[] -->
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>user-profile-integration</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>user-profile-integration</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>user-profile-integration</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::user-profile-integration-bom[] -->
+<!-- tag::metrics-bom[] -->
+    <dependency>
+      <groupId>com.backbase.metrics</groupId>
+      <artifactId>metric</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.metrics</groupId>
+      <artifactId>metric</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.metrics</groupId>
+      <artifactId>metric</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.metrics</groupId>
+      <artifactId>metric</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.metrics</groupId>
+      <artifactId>metric</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.metrics</groupId>
+      <artifactId>metric</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.metrics</groupId>
+      <artifactId>metric</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::metrics-bom[] -->
+<!-- tag::self-enrollment-journey-bom[] -->
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>enrollment-manager</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>enrollment-manager</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>enrollment-manager</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>enrollment-manager</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>enrollment-manager</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::self-enrollment-journey-bom[] -->
+<!-- tag::loan-application-bom[] -->
+    <dependency>
+      <groupId>com.backbase.loan-application</groupId>
+      <artifactId>loan-application</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan-application</groupId>
+      <artifactId>loan-application</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan-application</groupId>
+      <artifactId>loan-application</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan-application</groupId>
+      <artifactId>loan-application</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan-application</groupId>
+      <artifactId>loan-application</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+<!-- end::loan-application-bom[] -->
+<!-- tag::identity-orchestration-bom[] -->
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>identity-orchestration</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>identity-orchestration</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>identity-orchestration</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>identity-orchestration</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>identity-orchestration</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::identity-orchestration-bom[] -->
+<!-- tag::confirmation-bom[] -->
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>confirmation</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>confirmation</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>confirmation</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>confirmation</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>transaction-signing-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>transaction-signing-mock</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>transaction-signing-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::confirmation-bom[] -->
 <!-- tag::payments-bom[] -->
     <dependency>
       <groupId>com.backbase.dbs.paymentorder</groupId>
@@ -325,6 +1402,21 @@ Typically, not everything is needed.
     </dependency>
     <dependency>
       <groupId>com.backbase.dbs.paymentorder</groupId>
+      <artifactId>payment-integration</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.paymentorder</groupId>
+      <artifactId>payment-integration</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.paymentorder</groupId>
+      <artifactId>payment-integration</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.paymentorder</groupId>
       <artifactId>payment-order-a2a</artifactId>
       <type>zip</type>
       <classifier>api</classifier>
@@ -336,183 +1428,575 @@ Typically, not everything is needed.
       <classifier>api</classifier>
     </dependency>
 <!-- end::payments-bom[] -->
-<!-- tag::account-statements-bom[] -->
+<!-- tag::application-center-bom[] -->
     <dependency>
-      <groupId>com.backbase.dbs.account</groupId>
-      <artifactId>account-statement</artifactId>
+      <groupId>com.backbase.application-management</groupId>
+      <artifactId>application-management-service</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.account</groupId>
-      <artifactId>account-statement</artifactId>
+      <groupId>com.backbase.application-management</groupId>
+      <artifactId>application-management-contract</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.application-management</groupId>
+      <artifactId>application-management-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::application-center-bom[] -->
+<!-- tag::card-management-bom[] -->
+    <dependency>
+      <groupId>com.backbase.card</groupId>
+      <artifactId>card-manager</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.card</groupId>
+      <artifactId>card-manager</artifactId>
       <classifier>classes</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.account</groupId>
-      <artifactId>account-statement</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.account</groupId>
-      <artifactId>account-statement</artifactId>
+      <groupId>com.backbase.card</groupId>
+      <artifactId>card-manager</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.account</groupId>
-      <artifactId>account-statement</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.account</groupId>
-      <artifactId>account-statement-integration-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.account</groupId>
-      <artifactId>account-statement-integration-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::account-statements-bom[] -->
-<!-- tag::mobile-authentication-bom[] -->
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>mobile-authentication</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>mobile-authentication</artifactId>
+      <groupId>com.backbase.dbs.cards</groupId>
+      <artifactId>card-manager</artifactId>
       <type>zip</type>
       <classifier>api</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>mobile-authentication</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>passcode-validation-extension-service-api</artifactId>
+      <groupId>com.backbase.dbs.cards.entrust</groupId>
+      <artifactId>entrust-card-api</artifactId>
       <type>zip</type>
       <classifier>api</classifier>
     </dependency>
-<!-- end::mobile-authentication-bom[] -->
-<!-- tag::employee-bom[] -->
+<!-- end::card-management-bom[] -->
+<!-- tag::device-management-bom[] -->
     <dependency>
-      <groupId>com.backbase.dbs.employee</groupId>
-      <artifactId>employee</artifactId>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>device-management-service</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.employee</groupId>
-      <artifactId>employee</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.employee</groupId>
-      <artifactId>employee</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.employee.actions</groupId>
-      <artifactId>employee-actions</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.employee.actions</groupId>
-      <artifactId>employee-actions</artifactId>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>device-management-service</artifactId>
       <type>zip</type>
       <classifier>liquibase</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.employee.actions</groupId>
-      <artifactId>employee-actions</artifactId>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>device-management-service</artifactId>
       <type>zip</type>
       <classifier>api</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.employee.actions</groupId>
-      <artifactId>employee-actions</artifactId>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>device-management-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::device-management-bom[] -->
+<!-- tag::lending-regulatory-compliance-bom[] -->
+    <dependency>
+      <groupId>com.backbase.regulatory-compliance</groupId>
+      <artifactId>lending-regulatory-compliance</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.regulatory-compliance</groupId>
+      <artifactId>lending-regulatory-compliance</artifactId>
       <type>zip</type>
       <classifier>events</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.employee.actions</groupId>
-      <artifactId>employee-actions</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::employee-bom[] -->
-<!-- tag::transaction-bom[] -->
-    <dependency>
-      <groupId>com.backbase.dbs.transaction</groupId>
-      <artifactId>transaction-manager</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction</groupId>
-      <artifactId>transaction-manager</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction</groupId>
-      <artifactId>transaction-manager</artifactId>
+      <groupId>com.backbase.regulatory-compliance</groupId>
+      <artifactId>lending-regulatory-compliance</artifactId>
       <type>zip</type>
       <classifier>liquibase</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.transaction</groupId>
-      <artifactId>transaction-manager</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
+      <groupId>com.backbase.regulatory-compliance</groupId>
+      <artifactId>lending-regulatory-compliance</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.transaction</groupId>
-      <artifactId>transaction-manager</artifactId>
+      <groupId>com.backbase.regulatory-compliance</groupId>
+      <artifactId>lending-regulatory-compliance</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::lending-regulatory-compliance-bom[] -->
+<!-- tag::access-control-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>access-control</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>access-control</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>access-control</artifactId>
       <type>zip</type>
       <classifier>events</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.transaction</groupId>
-      <artifactId>transaction-manager</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
-      <artifactId>transaction-enricher</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
-      <artifactId>transaction-enricher</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
-      <artifactId>transaction-enricher</artifactId>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>access-control</artifactId>
       <type>zip</type>
       <classifier>liquibase</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
-      <artifactId>transaction-enricher</artifactId>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>access-control</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>auth-security-dbs-accesscontrol</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration-service</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration-external-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration-external-mock</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration-external-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accessgroup</groupId>
+      <artifactId>accessgroup-integration-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accessgroup</groupId>
+      <artifactId>accessgroup-integration-service</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accessgroup</groupId>
+      <artifactId>accessgroup-integration-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>access-control-openapi-spec</artifactId>
       <type>zip</type>
       <classifier>api</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
-      <artifactId>transaction-enricher</artifactId>
+      <groupId>com.backbase.accesscontrol</groupId>
+      <artifactId>permission-check-spec</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.accesscontrol</groupId>
+      <artifactId>customer-access-group-spec</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+<!-- end::access-control-bom[] -->
+<!-- tag::user-lifecycle-bom[] -->
+    <dependency>
+      <groupId>com.backbase.userlifecycle</groupId>
+      <artifactId>user-lifecycle</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.userlifecycle</groupId>
+      <artifactId>user-lifecycle</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.userlifecycle</groupId>
+      <artifactId>user-lifecycle</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.userlifecycle</groupId>
+      <artifactId>user-lifecycle</artifactId>
       <type>zip</type>
       <classifier>events</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
-      <artifactId>transaction-enricher</artifactId>
+      <groupId>com.backbase.userlifecycle</groupId>
+      <artifactId>user-lifecycle</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
-<!-- end::transaction-bom[] -->
+<!-- end::user-lifecycle-bom[] -->
+<!-- tag::user-profile-management-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.user</groupId>
+      <artifactId>user-profile-manager</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.user</groupId>
+      <artifactId>user-profile-manager</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.user</groupId>
+      <artifactId>user-profile-manager</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.user</groupId>
+      <artifactId>user-profile-manager</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.user</groupId>
+      <artifactId>user-profile-manager</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.user</groupId>
+      <artifactId>user-profile-core-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.user</groupId>
+      <artifactId>user-profile-core-mock</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.user</groupId>
+      <artifactId>user-profile-core-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.user</groupId>
+      <artifactId>user-profile-manager</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+<!-- end::user-profile-management-bom[] -->
+<!-- tag::account-recovery-manager-bom[] -->
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>account-recovery-manager</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>account-recovery-manager</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>account-recovery-manager</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>account-recovery-manager</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>account-recovery-manager</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+<!-- end::account-recovery-manager-bom[] -->
+<!-- tag::loans-bom[] -->
+    <dependency>
+      <groupId>com.backbase.loan</groupId>
+      <artifactId>loan</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan</groupId>
+      <artifactId>loan</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan</groupId>
+      <artifactId>loan</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan</groupId>
+      <artifactId>loan</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan</groupId>
+      <artifactId>loan-integration-outbound-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan</groupId>
+      <artifactId>loan</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan</groupId>
+      <artifactId>loan-integration-outbound-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::loans-bom[] -->
+<!-- tag::direct-deposit-switch-bom[] -->
+    <dependency>
+      <groupId>com.backbase.directdepositswitch</groupId>
+      <artifactId>direct-deposit-switcher</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.directdepositswitch</groupId>
+      <artifactId>direct-deposit-switcher</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.directdepositswitch</groupId>
+      <artifactId>direct-deposit-switcher</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.directdepositswitch</groupId>
+      <artifactId>direct-deposit-switcher</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.directdepositswitch</groupId>
+      <artifactId>atomic-connector</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.directdepositswitch</groupId>
+      <artifactId>atomic-connector</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.directdepositswitch</groupId>
+      <artifactId>atomic-connector</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.directdepositswitch</groupId>
+      <artifactId>atomic-connector</artifactId>
+    </dependency>
+<!-- end::direct-deposit-switch-bom[] -->
+<!-- tag::user-management-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.user</groupId>
+      <artifactId>user-manager</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.user</groupId>
+      <artifactId>user-manager</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.user</groupId>
+      <artifactId>user-manager</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.user</groupId>
+      <artifactId>user-manager</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.user</groupId>
+      <artifactId>user-manager</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.user</groupId>
+      <artifactId>user-integration-external-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.user</groupId>
+      <artifactId>user-integration-external-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.user</groupId>
+      <artifactId>user-manager</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+<!-- end::user-management-bom[] -->
+<!-- tag::billpay-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.billpay</groupId>
+      <artifactId>billpay-integrator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.billpay</groupId>
+      <artifactId>billpay-integrator</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.billpay</groupId>
+      <artifactId>billpay-integrator</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.billpay</groupId>
+      <artifactId>billpay-integrator</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.billpay</groupId>
+      <artifactId>billpay-integrator</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.billpay</groupId>
+      <artifactId>billpay-integrator</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.capabilities.extended</groupId>
+      <artifactId>billpay-integration-payveris-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.capabilities.extended</groupId>
+      <artifactId>billpay-integration-payveris-service</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.capabilities.extended</groupId>
+      <artifactId>billpay-integration-payveris-service</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.capabilities.extended</groupId>
+      <artifactId>billpay-integration-payveris-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::billpay-bom[] -->
+<!-- tag::approval-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.approval</groupId>
+      <artifactId>approval-service</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.approval</groupId>
+      <artifactId>approval-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.approval</groupId>
+      <artifactId>approval-service</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.approval</groupId>
+      <artifactId>approval-service</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.approval</groupId>
+      <artifactId>approval-service</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.approval</groupId>
+      <artifactId>approval-service</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.approval</groupId>
+      <artifactId>approval-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::approval-bom[] -->
+<!-- tag::token-converter-bom[] -->
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>platform-starter-token-converter</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>oidc-token-converter-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>oidc-token-converter-service</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>oidc-token-converter-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>token-converter-service-archetype</artifactId>
+    </dependency>
+<!-- end::token-converter-bom[] -->
 <!-- tag::external-account-aggregation-bom[] -->
     <dependency>
       <groupId>com.backbase.eaa.aggregation</groupId>
@@ -569,226 +2053,197 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::external-account-aggregation-bom[] -->
-<!-- tag::message-delivery-bom[] -->
+<!-- tag::audit-bom[] -->
     <dependency>
-      <groupId>com.backbase.communication</groupId>
-      <artifactId>communication</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.communication</groupId>
-      <artifactId>communication</artifactId>
+      <groupId>com.backbase.dbs.audit</groupId>
+      <artifactId>audit-spec</artifactId>
       <type>zip</type>
       <classifier>api</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.communication</groupId>
-      <artifactId>communication</artifactId>
+      <groupId>com.backbase.dbs.audit</groupId>
+      <artifactId>audit-spec</artifactId>
       <type>zip</type>
       <classifier>events</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.communication</groupId>
-      <artifactId>communication</artifactId>
+      <groupId>com.backbase.dbs.audit</groupId>
+      <artifactId>audit-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.audit</groupId>
+      <artifactId>audit-service</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.audit</groupId>
+      <artifactId>audit-service</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.audit</groupId>
+      <artifactId>audit-client</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>audit-mass-indexer-agent</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>audit-mass-indexer-agent</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.buildingblocks</groupId>
-      <artifactId>communication-channel</artifactId>
+      <groupId>com.backbase</groupId>
+      <artifactId>audit-mass-indexer-agent</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+<!-- end::audit-bom[] -->
+<!-- tag::edge-bom[] -->
+    <dependency>
+      <groupId>com.backbase.platform</groupId>
+      <artifactId>edge</artifactId>
+      <type>jar</type>
     </dependency>
     <dependency>
-      <groupId>com.backbase.communication</groupId>
-      <artifactId>engage-sms-connector</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.communication</groupId>
-      <artifactId>engage-sms-connector</artifactId>
+      <groupId>com.backbase.platform</groupId>
+      <artifactId>edge</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
-<!-- end::message-delivery-bom[] -->
-<!-- tag::push-notifications-bom[] -->
     <dependency>
-      <groupId>com.backbase.services.mobile</groupId>
-      <artifactId>push-integration</artifactId>
+      <groupId>com.backbase.platform.edge.filters</groupId>
+      <artifactId>edge-filters</artifactId>
       <type>pom</type>
     </dependency>
     <dependency>
-      <groupId>com.backbase.services.mobile</groupId>
-      <artifactId>push-integration-service</artifactId>
+      <groupId>com.backbase.platform.edge.filters</groupId>
+      <artifactId>edit-response-cookies</artifactId>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.platform.edge.filters</groupId>
+      <artifactId>remove-request-cookie</artifactId>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.platform.edge.filters</groupId>
+      <artifactId>rewrite-path</artifactId>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.platform.edge.filters</groupId>
+      <artifactId>token-conversion</artifactId>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.platform.edge.filters</groupId>
+      <artifactId>validate-routes</artifactId>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.platform.edge.filters</groupId>
+      <artifactId>form-auth-filter</artifactId>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.platform.edge.filters</groupId>
+      <artifactId>trace-filter</artifactId>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.platform.edge.filters</groupId>
+      <artifactId>scoped-access</artifactId>
+      <type>jar</type>
+    </dependency>
+<!-- end::edge-bom[] -->
+<!-- tag::appointments-bom[] -->
+    <dependency>
+      <groupId>com.backbase.appointment</groupId>
+      <artifactId>appointment</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.appointment</groupId>
+      <artifactId>appointment</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.appointment</groupId>
+      <artifactId>appointment</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.appointment</groupId>
+      <artifactId>appointment</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.appointment</groupId>
+      <artifactId>appointment-jrni-integrator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.appointment</groupId>
+      <artifactId>appointment-jrni-integrator</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::appointments-bom[] -->
+<!-- tag::notifications-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.notifications</groupId>
+      <artifactId>notifications-service</artifactId>
       <type>pom</type>
     </dependency>
     <dependency>
-      <groupId>com.backbase.services.mobile</groupId>
-      <artifactId>push-integration-service</artifactId>
+      <groupId>com.backbase.dbs.notifications</groupId>
+      <artifactId>notifications-service</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.backbase.services.mobile</groupId>
-      <artifactId>push-integration-service</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.services.mobile</groupId>
-      <artifactId>push-integration-service</artifactId>
+      <groupId>com.backbase.dbs.notifications</groupId>
+      <artifactId>notifications-service</artifactId>
       <type>zip</type>
       <classifier>liquibase</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.services.mobile</groupId>
-      <artifactId>push-integration-service</artifactId>
+      <groupId>com.backbase.dbs.notifications</groupId>
+      <artifactId>notifications-service</artifactId>
       <type>zip</type>
       <classifier>api</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.services.mobile</groupId>
-      <artifactId>push-integration-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::push-notifications-bom[] -->
-<!-- tag::token-converter-bom[] -->
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>platform-starter-token-converter</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>oidc-token-converter-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>oidc-token-converter-service</artifactId>
+      <groupId>com.backbase.dbs.notifications</groupId>
+      <artifactId>notifications-service</artifactId>
       <classifier>classes</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>oidc-token-converter-service</artifactId>
+      <groupId>com.backbase.dbs.notifications</groupId>
+      <artifactId>notifications-service</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
+<!-- end::notifications-bom[] -->
+<!-- tag::investment-bom[] -->
     <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>token-converter-service-archetype</artifactId>
-    </dependency>
-<!-- end::token-converter-bom[] -->
-<!-- tag::savvy-money-credit-scorer-bom[] -->
-    <dependency>
-      <groupId>com.backbase.credscr.savvymoney</groupId>
-      <artifactId>savvy-money-credit-scorer</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.credscr.savvymoney</groupId>
-      <artifactId>savvy-money-credit-scorer</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.credscr.savvymoney</groupId>
-      <artifactId>savvy-money-credit-scorer</artifactId>
+      <groupId>com.backbase.investment</groupId>
+      <artifactId>investment-trading-client-api</artifactId>
       <type>zip</type>
       <classifier>api</classifier>
     </dependency>
-    <dependency>
-      <groupId>com.backbase.credscr.savvymoney</groupId>
-      <artifactId>savvy-money-credit-scorer</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.credscr.savvymoney</groupId>
-      <artifactId>savvy-money-credit-scorer</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-<!-- end::savvy-money-credit-scorer-bom[] -->
-<!-- tag::self-enrollment-journey-bom[] -->
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>enrollment-manager</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>enrollment-manager</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>enrollment-manager</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>enrollment-manager</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>enrollment-manager</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::self-enrollment-journey-bom[] -->
-<!-- tag::address-autocomplete-bom[] -->
-    <dependency>
-      <groupId>com.backbase.address-autocomplete</groupId>
-      <artifactId>address-autocomplete</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.address-autocomplete</groupId>
-      <artifactId>address-autocomplete</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.address-autocomplete</groupId>
-      <artifactId>address-autocomplete</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.address-autocomplete</groupId>
-      <artifactId>address-autocomplete</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::address-autocomplete-bom[] -->
-<!-- tag::portfolio-bom[] -->
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>portfolio</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>portfolio-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>portfolio</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>portfolio-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>portfolio</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>portfolio</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-<!-- end::portfolio-bom[] -->
+<!-- end::investment-bom[] -->
 <!-- tag::products-bom[] -->
     <dependency>
       <groupId>com.backbase.products</groupId>
+      <artifactId>arrangement-manager-api</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.products</groupId>
       <artifactId>arrangement-manager</artifactId>
     </dependency>
     <dependency>
@@ -829,168 +2284,200 @@ Typically, not everything is needed.
       <artifactId>account-mock</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.products</groupId>
-      <artifactId>arrangement-clients</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.products</groupId>
-      <artifactId>arrangement-persistence</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.products</groupId>
-      <artifactId>test-util</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.products</groupId>
-      <artifactId>multi-context</artifactId>
     </dependency>
 <!-- end::products-bom[] -->
-<!-- tag::user-profile-management-bom[] -->
+<!-- tag::deposit-account-bom[] -->
     <dependency>
-      <groupId>com.backbase.dbs.user</groupId>
-      <artifactId>user-profile-manager</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.user</groupId>
-      <artifactId>user-profile-manager</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.user</groupId>
-      <artifactId>user-profile-manager</artifactId>
+      <groupId>com.backbase.depositaccount</groupId>
+      <artifactId>deposit-account-management</artifactId>
       <type>zip</type>
       <classifier>api</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.user</groupId>
-      <artifactId>user-profile-manager</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.user</groupId>
-      <artifactId>user-profile-manager</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.user</groupId>
-      <artifactId>user-profile-core-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.user</groupId>
-      <artifactId>user-profile-core-mock</artifactId>
+      <groupId>com.backbase.depositaccount</groupId>
+      <artifactId>deposit-account-management</artifactId>
       <classifier>classes</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.user</groupId>
-      <artifactId>user-profile-core-mock</artifactId>
+      <groupId>com.backbase.depositaccount</groupId>
+      <artifactId>deposit-account-management</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.user</groupId>
-      <artifactId>user-profile-manager</artifactId>
+      <groupId>com.backbase.depositaccount</groupId>
+      <artifactId>deposit-account-management</artifactId>
+    </dependency>
+<!-- end::deposit-account-bom[] -->
+<!-- tag::place-management-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.places</groupId>
+      <artifactId>place-manager</artifactId>
       <type>zip</type>
-      <classifier>liquibase</classifier>
+      <classifier>api</classifier>
     </dependency>
-<!-- end::user-profile-management-bom[] -->
-<!-- tag::messages-bom[] -->
+<!-- end::place-management-bom[] -->
+<!-- tag::households-bom[] -->
     <dependency>
-      <groupId>com.backbase.dbs.messages</groupId>
-      <artifactId>messages-service</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.messages</groupId>
-      <artifactId>messages-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.messages</groupId>
-      <artifactId>messages-service</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.messages</groupId>
-      <artifactId>messages-service</artifactId>
+      <groupId>com.backbase.households</groupId>
+      <artifactId>household-manager</artifactId>
       <type>zip</type>
       <classifier>api</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.messages</groupId>
-      <artifactId>messages-service</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.messages</groupId>
-      <artifactId>messages-service</artifactId>
+      <groupId>com.backbase.households</groupId>
+      <artifactId>household-manager</artifactId>
       <classifier>classes</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.messages</groupId>
-      <artifactId>messages-service</artifactId>
+      <groupId>com.backbase.households</groupId>
+      <artifactId>household-manager</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
-<!-- end::messages-bom[] -->
-<!-- tag::limit-bom[] -->
     <dependency>
-      <groupId>com.backbase.dbs.limit</groupId>
-      <artifactId>limit</artifactId>
-      <type>pom</type>
+      <groupId>com.backbase.households</groupId>
+      <artifactId>household-manager</artifactId>
+    </dependency>
+<!-- end::households-bom[] -->
+<!-- tag::cashflow-forecasting-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.cashflow</groupId>
+      <artifactId>cashflow-service</artifactId>
+      <type>jar</type>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.limit</groupId>
-      <artifactId>limit</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.limit</groupId>
-      <artifactId>limit</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.limit</groupId>
-      <artifactId>limit</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.limit</groupId>
-      <artifactId>limit</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.limit</groupId>
-      <artifactId>limit</artifactId>
+      <groupId>com.backbase.dbs.cashflow</groupId>
+      <artifactId>cashflow-service</artifactId>
       <type>zip</type>
       <classifier>liquibase</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.limit</groupId>
-      <artifactId>limit</artifactId>
+      <groupId>com.backbase.dbs.cashflow</groupId>
+      <artifactId>cashflow-service</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.cashflow</groupId>
+      <artifactId>cashflow-service</artifactId>
+      <type>jar</type>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.cashflow</groupId>
+      <artifactId>cashflow-service</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.limit</groupId>
-      <artifactId>limits-presentation-spi</artifactId>
-      <type>pom</type>
+      <groupId>com.backbase.dbs.cashflow</groupId>
+      <artifactId>accounting-integration-service</artifactId>
+      <type>jar</type>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.limit</groupId>
-      <artifactId>limits-presentation-spi</artifactId>
+      <groupId>com.backbase.dbs.cashflow</groupId>
+      <artifactId>accounting-integration-service</artifactId>
+      <type>jar</type>
+      <classifier>classes</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.limit</groupId>
-      <artifactId>limits-presentation-spi</artifactId>
-      <classifier>sources</classifier>
+      <groupId>com.backbase.dbs.cashflow</groupId>
+      <artifactId>accounting-integration-service</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
     </dependency>
-<!-- end::limit-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.cashflow</groupId>
+      <artifactId>accounting-integration-service</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.cashflow</groupId>
+      <artifactId>accounting-integration-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::cashflow-forecasting-bom[] -->
+<!-- tag::provisioning-bom[] -->
+    <dependency>
+      <groupId>com.backbase.cxp</groupId>
+      <artifactId>provisioning</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.cxp</groupId>
+      <artifactId>provisioning</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.cxp</groupId>
+      <artifactId>provisioning</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.tools</groupId>
+      <artifactId>provisioner</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.tools</groupId>
+      <artifactId>provisioner-cli</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.tools</groupId>
+      <artifactId>provisioner</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::provisioning-bom[] -->
+<!-- tag::audiences-bom[] -->
+    <dependency>
+      <groupId>com.backbase.usersegment</groupId>
+      <artifactId>user-segment</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.usersegment</groupId>
+      <artifactId>user-segment</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.usersegment</groupId>
+      <artifactId>user-segment</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.usersegment</groupId>
+      <artifactId>user-segment</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.usersegment.collector</groupId>
+      <artifactId>user-segments-collector</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.usersegment.collector</groupId>
+      <artifactId>user-segments-collector</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.usersegment.collector</groupId>
+      <artifactId>user-segments-collector</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.usersegment.collector</groupId>
+      <artifactId>user-segments-collector</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::audiences-bom[] -->
 <!-- tag::identity-core-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
@@ -1072,17 +2559,16 @@ Typically, not everything is needed.
     </dependency>
     <dependency>
       <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-model-legacy-private</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.keycloak</groupId>
       <artifactId>keycloak-model-legacy</artifactId>
       <type>pom</type>
     </dependency>
     <dependency>
       <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-model-legacy-private</artifactId>
-      <type>pom</type>
+      <artifactId>keycloak-model-storage</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-model-storage-private</artifactId>
     </dependency>
     <dependency>
       <groupId>org.keycloak</groupId>
@@ -1111,742 +2597,45 @@ Typically, not everything is needed.
       <classifier>api</classifier>
     </dependency>
 <!-- end::identity-core-bom[] -->
-<!-- tag::account-recovery-manager-bom[] -->
+<!-- tag::push-notifications-bom[] -->
     <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>account-recovery-manager</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>account-recovery-manager</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>account-recovery-manager</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>account-recovery-manager</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>account-recovery-manager</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-<!-- end::account-recovery-manager-bom[] -->
-<!-- tag::user-lifecycle-bom[] -->
-    <dependency>
-      <groupId>com.backbase.userlifecycle</groupId>
-      <artifactId>user-lifecycle</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.userlifecycle</groupId>
-      <artifactId>user-lifecycle</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.userlifecycle</groupId>
-      <artifactId>user-lifecycle</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.userlifecycle</groupId>
-      <artifactId>user-lifecycle</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.userlifecycle</groupId>
-      <artifactId>user-lifecycle</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::user-lifecycle-bom[] -->
-<!-- tag::loans-bom[] -->
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan-integration-outbound-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan-integration-outbound-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::loans-bom[] -->
-<!-- tag::engagements-bom[] -->
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
+      <groupId>com.backbase.services.mobile</groupId>
+      <artifactId>push-integration</artifactId>
       <type>pom</type>
     </dependency>
     <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>realtime-engagement-orchestrator</artifactId>
+      <groupId>com.backbase.services.mobile</groupId>
+      <artifactId>push-integration-service</artifactId>
       <type>pom</type>
     </dependency>
     <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>realtime-engagement-orchestrator</artifactId>
+      <groupId>com.backbase.services.mobile</groupId>
+      <artifactId>push-integration-service</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>realtime-engagement-orchestrator</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::engagements-bom[] -->
-<!-- tag::user-management-bom[] -->
-    <dependency>
-      <groupId>com.backbase.dbs.user</groupId>
-      <artifactId>user-manager</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.user</groupId>
-      <artifactId>user-manager</artifactId>
+      <groupId>com.backbase.services.mobile</groupId>
+      <artifactId>push-integration-service</artifactId>
       <classifier>classes</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.user</groupId>
-      <artifactId>user-manager</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.user</groupId>
-      <artifactId>user-manager</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.user</groupId>
-      <artifactId>user-manager</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.user</groupId>
-      <artifactId>user-integration-external-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.user</groupId>
-      <artifactId>user-integration-external-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.user</groupId>
-      <artifactId>user-manager</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-<!-- end::user-management-bom[] -->
-<!-- tag::vendor-bom[] -->
-    <dependency>
-      <groupId>com.backbase.dbs.capabilities.extended</groupId>
-      <artifactId>payveris-core</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.vendor</groupId>
-      <artifactId>payveris</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.vendor</groupId>
-      <artifactId>customer-provider-integrator</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.vendor</groupId>
-      <artifactId>payveris</artifactId>
+      <groupId>com.backbase.services.mobile</groupId>
+      <artifactId>push-integration-service</artifactId>
       <type>zip</type>
       <classifier>liquibase</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.vendor</groupId>
-      <artifactId>payveris</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.vendor</groupId>
-      <artifactId>payveris</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.vendor</groupId>
-      <artifactId>payveris-p2p-integrator</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.vendor</groupId>
-      <artifactId>payveris-p2p-integrator</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.vendor</groupId>
-      <artifactId>payveris-integration-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.vendor</groupId>
-      <artifactId>payveris-integration-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.vendor</groupId>
-      <artifactId>payveris-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.vendor</groupId>
-      <artifactId>payveris-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.vendor</groupId>
-      <artifactId>customer-provider-integrator</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.vendor</groupId>
-      <artifactId>customer-provider-integrator</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.vendor</groupId>
-      <artifactId>customer-provider-integrator</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-<!-- end::vendor-bom[] -->
-<!-- tag::remote-config-bom[] -->
-    <dependency>
-      <groupId>com.backbase.remoteconfig</groupId>
-      <artifactId>remote-config</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.remoteconfig</groupId>
-      <artifactId>remote-config</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.remoteconfig</groupId>
-      <artifactId>remote-config</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-<!-- end::remote-config-bom[] -->
-<!-- tag::remote-deposit-capture-bom[] -->
-    <dependency>
-      <groupId>com.backbase.dbs.rdc</groupId>
-      <artifactId>remote-deposit-capturer</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.rdc</groupId>
-      <artifactId>remote-deposit-capturer</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.rdc</groupId>
-      <artifactId>remote-deposit-capturer</artifactId>
+      <groupId>com.backbase.services.mobile</groupId>
+      <artifactId>push-integration-service</artifactId>
       <type>zip</type>
       <classifier>api</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.rdc</groupId>
-      <artifactId>remote-deposit-capturer</artifactId>
+      <groupId>com.backbase.services.mobile</groupId>
+      <artifactId>push-integration-service</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
-<!-- end::remote-deposit-capture-bom[] -->
-<!-- tag::comments-bom[] -->
-    <dependency>
-      <groupId>com.backbase.comments</groupId>
-      <artifactId>comments</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.comments</groupId>
-      <artifactId>comments</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.comments</groupId>
-      <artifactId>comments</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.comments</groupId>
-      <artifactId>comments-starter</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.comments</groupId>
-      <artifactId>comments</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::comments-bom[] -->
-<!-- tag::approval-bom[] -->
-    <dependency>
-      <groupId>com.backbase.dbs.approval</groupId>
-      <artifactId>approval-service</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.approval</groupId>
-      <artifactId>approval-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.approval</groupId>
-      <artifactId>approval-service</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.approval</groupId>
-      <artifactId>approval-service</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.approval</groupId>
-      <artifactId>approval-service</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.approval</groupId>
-      <artifactId>approval-service</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.approval</groupId>
-      <artifactId>approval-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::approval-bom[] -->
-<!-- tag::document-storage-bom[] -->
-    <dependency>
-      <groupId>com.backbase.cxp</groupId>
-      <artifactId>contentservices</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.cxp</groupId>
-      <artifactId>contentservices</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.cxp</groupId>
-      <artifactId>contentservices</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>clamav-antivirus-connector</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>clamav-antivirus-connector</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>s3-storage-connector</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>s3-storage-connector</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>azure-blob-storage-connector</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>azure-blob-storage-connector</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::document-storage-bom[] -->
-<!-- tag::provisioning-bom[] -->
-    <dependency>
-      <groupId>com.backbase.cxp</groupId>
-      <artifactId>provisioning</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.cxp</groupId>
-      <artifactId>provisioning</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.cxp</groupId>
-      <artifactId>provisioning</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.tools</groupId>
-      <artifactId>provisioner</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.tools</groupId>
-      <artifactId>provisioner-cli</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.tools</groupId>
-      <artifactId>provisioner</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::provisioning-bom[] -->
-<!-- tag::fido-bom[] -->
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>fido-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>fido-service</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>fido-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>device-management-model-admin</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>device-management-model-fido</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>device-services-common</artifactId>
-    </dependency>
-<!-- end::fido-bom[] -->
-<!-- tag::edge-bom[] -->
-    <dependency>
-      <groupId>com.backbase.platform</groupId>
-      <artifactId>edge</artifactId>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.platform</groupId>
-      <artifactId>edge</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.platform.edge.filters</groupId>
-      <artifactId>edge-filters</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.platform.edge.filters</groupId>
-      <artifactId>edit-response-cookies</artifactId>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.platform.edge.filters</groupId>
-      <artifactId>mobile-csrf</artifactId>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.platform.edge.filters</groupId>
-      <artifactId>remove-request-cookie</artifactId>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.platform.edge.filters</groupId>
-      <artifactId>rewrite-path</artifactId>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.platform.edge.filters</groupId>
-      <artifactId>token-conversion</artifactId>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.platform.edge.filters</groupId>
-      <artifactId>validate-routes</artifactId>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.platform.edge.filters</groupId>
-      <artifactId>form-auth-filter</artifactId>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.platform.edge.filters</groupId>
-      <artifactId>trace-filter</artifactId>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.platform.edge.filters</groupId>
-      <artifactId>scoped-access</artifactId>
-      <type>jar</type>
-    </dependency>
-<!-- end::edge-bom[] -->
-<!-- tag::audit-bom[] -->
-    <dependency>
-      <groupId>com.backbase.dbs.audit</groupId>
-      <artifactId>audit-spec</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.audit</groupId>
-      <artifactId>audit-spec</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.audit</groupId>
-      <artifactId>audit-spec</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.audit</groupId>
-      <artifactId>audit-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.audit</groupId>
-      <artifactId>audit-service</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.audit</groupId>
-      <artifactId>audit-service</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.audit</groupId>
-      <artifactId>audit-client</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>audit-mass-indexer-agent</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>audit-mass-indexer-agent</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase</groupId>
-      <artifactId>audit-mass-indexer-agent</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-<!-- end::audit-bom[] -->
-<!-- tag::service-discovery-bom[] -->
-    <dependency>
-      <groupId>com.backbase.infra</groupId>
-      <artifactId>registry</artifactId>
-      <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.infra</groupId>
-      <artifactId>registry</artifactId>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.infra</groupId>
-      <artifactId>registry</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::service-discovery-bom[] -->
-<!-- tag::batches-bom[] -->
-    <dependency>
-      <groupId>com.backbase.batch</groupId>
-      <artifactId>payment-batch</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.batch.nacha</groupId>
-      <artifactId>nacha-writer</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.batch</groupId>
-      <artifactId>payment-batch</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.batch</groupId>
-      <artifactId>payment-batch</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.batch</groupId>
-      <artifactId>payment-batch</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.batch</groupId>
-      <artifactId>payment-batch-core-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.batch</groupId>
-      <artifactId>payment-batch</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.batch</groupId>
-      <artifactId>payment-batch-core-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::batches-bom[] -->
-<!-- tag::confirmation-bom[] -->
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>confirmation</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>confirmation</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>confirmation</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>confirmation</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>transaction-signing-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>transaction-signing-mock</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>transaction-signing-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::confirmation-bom[] -->
-<!-- tag::card-management-bom[] -->
-    <dependency>
-      <groupId>com.backbase.card</groupId>
-      <artifactId>card-manager</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.card</groupId>
-      <artifactId>card-manager</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.card</groupId>
-      <artifactId>card-manager</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.cards</groupId>
-      <artifactId>card-manager</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.cards.entrust</groupId>
-      <artifactId>entrust-card-api</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-<!-- end::card-management-bom[] -->
+<!-- end::push-notifications-bom[] -->
 <!-- tag::financial-insights-bom[] -->
     <dependency>
       <groupId>com.backbase.dbs.pfm</groupId>
@@ -1957,504 +2746,30 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::financial-insights-bom[] -->
-<!-- tag::communications-outbound-integration-bom[] -->
+<!-- tag::financial-data-gathering-bom[] -->
     <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>communications-outbound-integration-mock</artifactId>
+      <groupId>com.backbase.lending</groupId>
+      <artifactId>financial-data-gathering</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>communications-outbound-integration-mock</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>communications-outbound-integration-mock</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>communications-outbound-integration-mock</artifactId>
+      <groupId>com.backbase.lending</groupId>
+      <artifactId>financial-data-gathering</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
-<!-- end::communications-outbound-integration-bom[] -->
-<!-- tag::web-authentication-bom[] -->
     <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>web-authentication</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>web-authentication</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>web-authentication</artifactId>
+      <groupId>com.backbase.lending</groupId>
+      <artifactId>financial-data-gathering</artifactId>
       <type>zip</type>
       <classifier>api</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>web-authentication</artifactId>
+      <groupId>com.backbase.lending</groupId>
+      <artifactId>financial-data-gathering</artifactId>
       <type>zip</type>
       <classifier>liquibase</classifier>
     </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>web-authentication</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::web-authentication-bom[] -->
-<!-- tag::hard-token-integration-outbound-bom[] -->
-    <dependency>
-      <groupId>com.backbase.identity.hardtoken</groupId>
-      <artifactId>hard-token-integration-outbound-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity.hardtoken</groupId>
-      <artifactId>hard-token-integration-outbound-mock</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity.hardtoken</groupId>
-      <artifactId>hard-token-integration-outbound-mock</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity.hardtoken</groupId>
-      <artifactId>hard-token-integration-outbound-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::hard-token-integration-outbound-bom[] -->
-<!-- tag::identity-integration-bom[] -->
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>identity-integration-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>identity-integration-service</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>identity-integration-service</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>identity-integration-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::identity-integration-bom[] -->
-<!-- tag::place-management-bom[] -->
-    <dependency>
-      <groupId>com.backbase.dbs.places</groupId>
-      <artifactId>place-manager</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-<!-- end::place-management-bom[] -->
-<!-- tag::engagement-content-bom[] -->
-    <dependency>
-      <groupId>com.backbase.contentenricher</groupId>
-      <artifactId>content-enricher</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.contentenricher</groupId>
-      <artifactId>content-enricher</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.contentenricher</groupId>
-      <artifactId>content-enricher</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.contentenricher</groupId>
-      <artifactId>content-enricher</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.contentenricher</groupId>
-      <artifactId>content-enricher</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-<!-- end::engagement-content-bom[] -->
-<!-- tag::rtc-bom[] -->
-    <dependency>
-      <groupId>com.backbase.rtc</groupId>
-      <artifactId>rtc</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.rtc</groupId>
-      <artifactId>rtc</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.rtc</groupId>
-      <artifactId>rtc</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.rtc</groupId>
-      <artifactId>rtc</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.rtc</groupId>
-      <artifactId>rtc</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.rtc</groupId>
-      <artifactId>rtc-twilio-integrator</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.rtc</groupId>
-      <artifactId>rtc-twilio-integrator</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.rtc</groupId>
-      <artifactId>rtc-twilio-integrator</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::rtc-bom[] -->
-<!-- tag::self-enrollment-support-api-bom[] -->
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>enrollment-support-service-api</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>enrollment-support-service-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>enrollment-support-service-mock</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>enrollment-support-service-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::self-enrollment-support-api-bom[] -->
-<!-- tag::notifications-bom[] -->
-    <dependency>
-      <groupId>com.backbase.dbs.notifications</groupId>
-      <artifactId>notifications-service</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.notifications</groupId>
-      <artifactId>notifications-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.notifications</groupId>
-      <artifactId>notifications-service</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.notifications</groupId>
-      <artifactId>notifications-service</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.notifications</groupId>
-      <artifactId>notifications-service</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.notifications</groupId>
-      <artifactId>notifications-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::notifications-bom[] -->
-<!-- tag::positive-pay-bom[] -->
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-check</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-check</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-check</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-check</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-check</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-integration-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-integration-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-ach</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-ach</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-ach</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-ach</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-ach</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-ach-integration-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-ach-integration-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::positive-pay-bom[] -->
-<!-- tag::bank-calendar-bom[] -->
-    <dependency>
-      <groupId>com.backbase.calendar</groupId>
-      <artifactId>bank-calendar</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.calendar</groupId>
-      <artifactId>bank-calendar</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.calendar</groupId>
-      <artifactId>bank-calendar</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.calendar</groupId>
-      <artifactId>bank-calendar</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::bank-calendar-bom[] -->
-<!-- tag::audiences-bom[] -->
-    <dependency>
-      <groupId>com.backbase.usersegment</groupId>
-      <artifactId>user-segment</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.usersegment</groupId>
-      <artifactId>user-segment</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.usersegment</groupId>
-      <artifactId>user-segment</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.usersegment</groupId>
-      <artifactId>user-segment</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.usersegment.collector</groupId>
-      <artifactId>user-segments-collector</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.usersegment.collector</groupId>
-      <artifactId>user-segments-collector</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.usersegment.collector</groupId>
-      <artifactId>user-segments-collector</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.usersegment.collector</groupId>
-      <artifactId>user-segments-collector</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::audiences-bom[] -->
-<!-- tag::access-control-bom[] -->
-    <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>access-control</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>access-control</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>access-control</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>access-control</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>access-control</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>access-control</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>auth-security-dbs-accesscontrol</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>auth-security-dbs-accesscontrol</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration-service</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration-service</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration-external-mock</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration-external-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration-external-mock</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration-external-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accessgroup</groupId>
-      <artifactId>accessgroup-integration-service</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accessgroup</groupId>
-      <artifactId>accessgroup-integration-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accessgroup</groupId>
-      <artifactId>accessgroup-integration-service</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accessgroup</groupId>
-      <artifactId>accessgroup-integration-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>access-control-openapi-spec</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>access-control-openapi-spec</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-<!-- end::access-control-bom[] -->
+<!-- end::financial-data-gathering-bom[] -->
 <!-- tag::consent-bom[] -->
     <dependency>
       <groupId>com.backbase.dbs.consent</groupId>
@@ -2463,51 +2778,257 @@ Typically, not everything is needed.
       <classifier>api</classifier>
     </dependency>
 <!-- end::consent-bom[] -->
-<!-- tag::exchange-bom[] -->
+<!-- tag::address-autocomplete-bom[] -->
     <dependency>
-      <groupId>com.backbase.dbs.exchange</groupId>
-      <artifactId>exchange-integration-service</artifactId>
+      <groupId>com.backbase.address-autocomplete</groupId>
+      <artifactId>address-autocomplete</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.exchange</groupId>
-      <artifactId>exchange-integration-service</artifactId>
-      <type>war</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.exchange</groupId>
-      <artifactId>exchange-integration-service</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-<!-- end::exchange-bom[] -->
-<!-- tag::identity-orchestration-bom[] -->
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>identity-orchestration</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>identity-orchestration</artifactId>
+      <groupId>com.backbase.address-autocomplete</groupId>
+      <artifactId>address-autocomplete</artifactId>
       <classifier>classes</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>identity-orchestration</artifactId>
+      <groupId>com.backbase.address-autocomplete</groupId>
+      <artifactId>address-autocomplete</artifactId>
       <type>zip</type>
       <classifier>api</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>identity-orchestration</artifactId>
+      <groupId>com.backbase.address-autocomplete</groupId>
+      <artifactId>address-autocomplete</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::address-autocomplete-bom[] -->
+<!-- tag::remote-deposit-capture-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.rdc</groupId>
+      <artifactId>remote-deposit-capturer</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.rdc</groupId>
+      <artifactId>remote-deposit-capturer</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.rdc</groupId>
+      <artifactId>remote-deposit-capturer</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.rdc</groupId>
+      <artifactId>remote-deposit-capturer</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::remote-deposit-capture-bom[] -->
+<!-- tag::savvy-money-credit-scorer-bom[] -->
+    <dependency>
+      <groupId>com.backbase.credscr.savvymoney</groupId>
+      <artifactId>savvy-money-credit-scorer</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.credscr.savvymoney</groupId>
+      <artifactId>savvy-money-credit-scorer</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.credscr.savvymoney</groupId>
+      <artifactId>savvy-money-credit-scorer</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.credscr.savvymoney</groupId>
+      <artifactId>savvy-money-credit-scorer</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.credscr.savvymoney</groupId>
+      <artifactId>savvy-money-credit-scorer</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+<!-- end::savvy-money-credit-scorer-bom[] -->
+<!-- tag::remote-config-bom[] -->
+    <dependency>
+      <groupId>com.backbase.remoteconfig</groupId>
+      <artifactId>remote-config</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.remoteconfig</groupId>
+      <artifactId>remote-config</artifactId>
       <type>zip</type>
       <classifier>liquibase</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>identity-orchestration</artifactId>
+      <groupId>com.backbase.remoteconfig</groupId>
+      <artifactId>remote-config</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+<!-- end::remote-config-bom[] -->
+<!-- tag::employee-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.employee</groupId>
+      <artifactId>employee</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.employee</groupId>
+      <artifactId>employee</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.employee</groupId>
+      <artifactId>employee</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
-<!-- end::identity-orchestration-bom[] -->
+    <dependency>
+      <groupId>com.backbase.employee.actions</groupId>
+      <artifactId>employee-actions</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.employee.actions</groupId>
+      <artifactId>employee-actions</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.employee.actions</groupId>
+      <artifactId>employee-actions</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.employee.actions</groupId>
+      <artifactId>employee-actions</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.employee.actions</groupId>
+      <artifactId>employee-actions</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::employee-bom[] -->
+<!-- tag::document-storage-bom[] -->
+    <dependency>
+      <groupId>com.backbase.cxp</groupId>
+      <artifactId>contentservices</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.cxp</groupId>
+      <artifactId>contentservices</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.cxp</groupId>
+      <artifactId>contentservices</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>clamav-antivirus-connector</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>clamav-antivirus-connector</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>s3-storage-connector</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>s3-storage-connector</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>azure-blob-storage-connector</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase</groupId>
+      <artifactId>azure-blob-storage-connector</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::document-storage-bom[] -->
+<!-- tag::credit-cards-bom[] -->
+    <dependency>
+      <groupId>com.backbase.lending</groupId>
+      <artifactId>credit-cards</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.lending</groupId>
+      <artifactId>credit-cards</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.lending</groupId>
+      <artifactId>credit-cards</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.lending</groupId>
+      <artifactId>credit-cards</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>auth-security-dbs-accesscontrol</artifactId>
+    </dependency>
+<!-- end::credit-cards-bom[] -->
+<!-- tag::tailored-value-bom[] -->
+    <dependency>
+      <groupId>com.backbase.tailoredvalue</groupId>
+      <artifactId>plan-manager</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.tailoredvalue</groupId>
+      <artifactId>plan-manager</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.tailoredvalue</groupId>
+      <artifactId>plan-manager</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.tailoredvalue</groupId>
+      <artifactId>plan-manager</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.tailoredvalue</groupId>
+      <artifactId>plan-manager</artifactId>
+    </dependency>
+<!-- end::tailored-value-bom[] -->
+<!-- tag::loan-request-integration-bom[] -->
+    <dependency>
+      <groupId>com.backbase.application.loan-review-system</groupId>
+      <artifactId>loan-request-integration-api-spec</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+<!-- end::loan-request-integration-bom[] -->
   </dependencies>
 </project>
