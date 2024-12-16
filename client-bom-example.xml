@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2024.12.7</version>
+  <version>BANK-VERSION-USING-2024.12.8</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2024.12.7</version>
+        <version>2024.12.8</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -2014,6 +2014,60 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::external-account-aggregation-bom[] -->
+<!-- tag::loans-bom[] -->
+    <dependency>
+      <groupId>com.backbase.loan</groupId>
+      <artifactId>loan</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan</groupId>
+      <artifactId>loan</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan</groupId>
+      <artifactId>loan</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan</groupId>
+      <artifactId>loan</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan</groupId>
+      <artifactId>loan-integration-outbound-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan</groupId>
+      <artifactId>loan</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan</groupId>
+      <artifactId>loan-integration-outbound-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan</groupId>
+      <artifactId>loan-integration</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan</groupId>
+      <artifactId>loan-integration</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan</groupId>
+      <artifactId>loan-integration</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::loans-bom[] -->
 <!-- tag::audit-bom[] -->
     <dependency>
       <groupId>com.backbase.dbs.audit</groupId>
@@ -2389,60 +2443,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::audiences-bom[] -->
-<!-- tag::loans-bom[] -->
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan-integration-outbound-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan-integration-outbound-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan-integration</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan-integration</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan</groupId>
-      <artifactId>loan-integration</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::loans-bom[] -->
 <!-- tag::identity-core-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
