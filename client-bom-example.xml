@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2023.09.104-LTS</version>
+  <version>BANK-VERSION-USING-2023.09.105-LTS</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2023.09.104-LTS</version>
+        <version>2023.09.105-LTS</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -1720,116 +1720,82 @@ Typically, not everything is needed.
       <classifier>api</classifier>
     </dependency>
 <!-- end::card-management-bom[] -->
-<!-- tag::financial-insights-bom[] -->
+<!-- tag::positive-pay-bom[] -->
     <dependency>
-      <groupId>com.backbase.dbs.pfm</groupId>
-      <artifactId>transaction-category-collector</artifactId>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-check</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.pfm</groupId>
-      <artifactId>transaction-category-collector</artifactId>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-check</artifactId>
       <classifier>classes</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.pfm</groupId>
-      <artifactId>transaction-category-collector</artifactId>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-check</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-check</artifactId>
       <type>zip</type>
       <classifier>liquibase</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.pfm</groupId>
-      <artifactId>transaction-category-collector</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.pfm</groupId>
-      <artifactId>transaction-category-collector</artifactId>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-check</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.pfm</groupId>
-      <artifactId>budget-planner</artifactId>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-integration-mock</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.pfm</groupId>
-      <artifactId>budget-planner</artifactId>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-integration-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-ach</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-ach</artifactId>
       <classifier>classes</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.pfm</groupId>
-      <artifactId>budget-planner</artifactId>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-ach</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-ach</artifactId>
       <type>zip</type>
       <classifier>liquibase</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.pfm</groupId>
-      <artifactId>budget-planner</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.pfm</groupId>
-      <artifactId>budget-planner</artifactId>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-ach</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.pfm.pocket</groupId>
-      <artifactId>pocket-tailor</artifactId>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-ach-integration-mock</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.backbase.pfm.pocket</groupId>
-      <artifactId>pocket-tailor</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.pfm.pocket</groupId>
-      <artifactId>pocket-tailor</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.pfm.pocket</groupId>
-      <artifactId>pocket-tailor</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.pfm.pocket</groupId>
-      <artifactId>pocket-tailor</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.pfm.pocket</groupId>
-      <artifactId>pocket-tailor</artifactId>
+      <groupId>com.backbase.positive-pay</groupId>
+      <artifactId>positive-pay-ach-integration-mock</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
-    <dependency>
-      <groupId>com.backbase.pfm.analysis</groupId>
-      <artifactId>income-expense-analyzer</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.pfm.analysis</groupId>
-      <artifactId>income-expense-analyzer</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.pfm.analysis</groupId>
-      <artifactId>income-expense-analyzer</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.pfm.analysis</groupId>
-      <artifactId>income-expense-analyzer</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::financial-insights-bom[] -->
+<!-- end::positive-pay-bom[] -->
 <!-- tag::communications-outbound-integration-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
@@ -2196,82 +2162,116 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::document-storage-bom[] -->
-<!-- tag::positive-pay-bom[] -->
+<!-- tag::financial-insights-bom[] -->
     <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-check</artifactId>
+      <groupId>com.backbase.dbs.pfm</groupId>
+      <artifactId>transaction-category-collector</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-check</artifactId>
+      <groupId>com.backbase.dbs.pfm</groupId>
+      <artifactId>transaction-category-collector</artifactId>
       <classifier>classes</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-check</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-check</artifactId>
+      <groupId>com.backbase.dbs.pfm</groupId>
+      <artifactId>transaction-category-collector</artifactId>
       <type>zip</type>
       <classifier>liquibase</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-check</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-integration-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-integration-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-ach</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-ach</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-ach</artifactId>
+      <groupId>com.backbase.dbs.pfm</groupId>
+      <artifactId>transaction-category-collector</artifactId>
       <type>zip</type>
       <classifier>api</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-ach</artifactId>
+      <groupId>com.backbase.dbs.pfm</groupId>
+      <artifactId>transaction-category-collector</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.pfm</groupId>
+      <artifactId>budget-planner</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.pfm</groupId>
+      <artifactId>budget-planner</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.pfm</groupId>
+      <artifactId>budget-planner</artifactId>
       <type>zip</type>
       <classifier>liquibase</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-ach</artifactId>
+      <groupId>com.backbase.dbs.pfm</groupId>
+      <artifactId>budget-planner</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.pfm</groupId>
+      <artifactId>budget-planner</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-ach-integration-mock</artifactId>
+      <groupId>com.backbase.pfm.pocket</groupId>
+      <artifactId>pocket-tailor</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.backbase.positive-pay</groupId>
-      <artifactId>positive-pay-ach-integration-mock</artifactId>
+      <groupId>com.backbase.pfm.pocket</groupId>
+      <artifactId>pocket-tailor</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.pfm.pocket</groupId>
+      <artifactId>pocket-tailor</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.pfm.pocket</groupId>
+      <artifactId>pocket-tailor</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.pfm.pocket</groupId>
+      <artifactId>pocket-tailor</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.pfm.pocket</groupId>
+      <artifactId>pocket-tailor</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
-<!-- end::positive-pay-bom[] -->
+    <dependency>
+      <groupId>com.backbase.pfm.analysis</groupId>
+      <artifactId>income-expense-analyzer</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.pfm.analysis</groupId>
+      <artifactId>income-expense-analyzer</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.pfm.analysis</groupId>
+      <artifactId>income-expense-analyzer</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.pfm.analysis</groupId>
+      <artifactId>income-expense-analyzer</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::financial-insights-bom[] -->
 <!-- tag::bank-calendar-bom[] -->
     <dependency>
       <groupId>com.backbase.calendar</groupId>
