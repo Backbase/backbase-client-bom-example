@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2025.03.11-LTS</version>
+  <version>BANK-VERSION-USING-2025.03.12-LTS</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2025.03.11-LTS</version>
+        <version>2025.03.12-LTS</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -1398,6 +1398,104 @@ Typically, not everything is needed.
       <classifier>events</classifier>
     </dependency>
 <!-- end::engagement-content-bom[] -->
+<!-- tag::engagements-bom[] -->
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>realtime-engagement-orchestrator</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>realtime-engagement-orchestrator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>realtime-engagement-orchestrator</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::engagements-bom[] -->
+<!-- tag::exchange-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.exchange</groupId>
+      <artifactId>exchange-integration-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.exchange</groupId>
+      <artifactId>exchange-integration-service</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.exchange</groupId>
+      <artifactId>exchange-integration-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::exchange-bom[] -->
+<!-- tag::device-management-bom[] -->
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>device-management-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>device-management-service</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>device-management-service</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>device-management-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>device-management-service</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+<!-- end::device-management-bom[] -->
 <!-- tag::identity-core-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
@@ -1517,104 +1615,6 @@ Typically, not everything is needed.
       <classifier>api</classifier>
     </dependency>
 <!-- end::identity-core-bom[] -->
-<!-- tag::engagements-bom[] -->
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>realtime-engagement-orchestrator</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>realtime-engagement-orchestrator</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>realtime-engagement-orchestrator</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::engagements-bom[] -->
-<!-- tag::exchange-bom[] -->
-    <dependency>
-      <groupId>com.backbase.dbs.exchange</groupId>
-      <artifactId>exchange-integration-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.exchange</groupId>
-      <artifactId>exchange-integration-service</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.exchange</groupId>
-      <artifactId>exchange-integration-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::exchange-bom[] -->
-<!-- tag::device-management-bom[] -->
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>device-management-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>device-management-service</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>device-management-service</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>device-management-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>device-management-service</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-<!-- end::device-management-bom[] -->
 <!-- tag::account-recovery-manager-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
