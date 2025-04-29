@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2025.04</version>
+  <version>BANK-VERSION-USING-2025.04.1</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2025.04</version>
+        <version>2025.04.1</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -348,29 +348,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::customer-profile-bom[] -->
-<!-- tag::address-autocomplete-bom[] -->
-    <dependency>
-      <groupId>com.backbase.address-autocomplete</groupId>
-      <artifactId>address-autocomplete</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.address-autocomplete</groupId>
-      <artifactId>address-autocomplete</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.address-autocomplete</groupId>
-      <artifactId>address-autocomplete</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.address-autocomplete</groupId>
-      <artifactId>address-autocomplete</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::address-autocomplete-bom[] -->
 <!-- tag::engagement-content-bom[] -->
     <dependency>
       <groupId>com.backbase.contentenricher</groupId>
@@ -590,29 +567,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::push-notifications-bom[] -->
-<!-- tag::identity-integration-bom[] -->
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>identity-integration-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>identity-integration-service</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>identity-integration-service</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.identity</groupId>
-      <artifactId>identity-integration-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::identity-integration-bom[] -->
 <!-- tag::bank-calendar-bom[] -->
     <dependency>
       <groupId>com.backbase.calendar</groupId>
@@ -2005,6 +1959,29 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::appointments-bom[] -->
+<!-- tag::address-autocomplete-bom[] -->
+    <dependency>
+      <groupId>com.backbase.address-autocomplete</groupId>
+      <artifactId>address-autocomplete</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.address-autocomplete</groupId>
+      <artifactId>address-autocomplete</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.address-autocomplete</groupId>
+      <artifactId>address-autocomplete</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.address-autocomplete</groupId>
+      <artifactId>address-autocomplete</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::address-autocomplete-bom[] -->
 <!-- tag::audit-bom[] -->
     <dependency>
       <groupId>com.backbase.dbs.audit</groupId>
@@ -2044,6 +2021,29 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::audit-bom[] -->
+<!-- tag::identity-integration-bom[] -->
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>identity-integration-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>identity-integration-service</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>identity-integration-service</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.identity</groupId>
+      <artifactId>identity-integration-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::identity-integration-bom[] -->
 <!-- tag::content-cards-bom[] -->
     <dependency>
       <groupId>com.backbase.contentcard</groupId>
