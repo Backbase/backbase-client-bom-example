@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2025.04.8</version>
+  <version>BANK-VERSION-USING-2025.04.9</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2025.04.8</version>
+        <version>2025.04.9</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -400,6 +400,105 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::customer-profile-bom[] -->
+<!-- tag::access-control-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>access-control</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>access-control</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>access-control</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>access-control</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>access-control</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>access-control</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accesscontrol</groupId>
+      <artifactId>auth-security-dbs-accesscontrol</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration-service</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration-external-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration-external-mock</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.legalentity</groupId>
+      <artifactId>legalentity-integration-external-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accessgroup</groupId>
+      <artifactId>accessgroup-integration-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accessgroup</groupId>
+      <artifactId>accessgroup-integration-service</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.accessgroup</groupId>
+      <artifactId>accessgroup-integration-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::access-control-bom[] -->
 <!-- tag::deposit-account-bom[] -->
     <dependency>
       <groupId>com.backbase.depositaccount</groupId>
@@ -1518,105 +1617,82 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::self-enrollment-journey-bom[] -->
-<!-- tag::access-control-bom[] -->
+<!-- tag::batches-bom[] -->
     <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>access-control</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>access-control</artifactId>
+      <groupId>com.backbase.batch</groupId>
+      <artifactId>payment-batch</artifactId>
       <classifier>classes</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>access-control</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
+      <groupId>com.backbase.batch.nacha</groupId>
+      <artifactId>nacha-writer</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>access-control</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
+      <groupId>com.backbase.mandate</groupId>
+      <artifactId>mandate-manager</artifactId>
+      <classifier>classes</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>access-control</artifactId>
+      <groupId>com.backbase.batch</groupId>
+      <artifactId>payment-batch</artifactId>
       <type>zip</type>
       <classifier>api</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>access-control</artifactId>
+      <groupId>com.backbase.mandate</groupId>
+      <artifactId>mandate-manager</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.batch</groupId>
+      <artifactId>payment-batch</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.mandate</groupId>
+      <artifactId>mandate-manager</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.batch</groupId>
+      <artifactId>payment-batch</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.batch</groupId>
+      <artifactId>payment-batch</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.batch</groupId>
+      <artifactId>payment-batch-core-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.mandate</groupId>
+      <artifactId>mandate-manager</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.batch</groupId>
+      <artifactId>payment-batch</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.accesscontrol</groupId>
-      <artifactId>auth-security-dbs-accesscontrol</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration-service</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration-service</artifactId>
+      <groupId>com.backbase.batch</groupId>
+      <artifactId>payment-batch-core-mock</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
     <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration</artifactId>
+      <groupId>com.backbase.mandate</groupId>
+      <artifactId>mandate-manager</artifactId>
       <type>json</type>
       <classifier>meta</classifier>
     </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration-external-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration-external-mock</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.legalentity</groupId>
-      <artifactId>legalentity-integration-external-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accessgroup</groupId>
-      <artifactId>accessgroup-integration-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accessgroup</groupId>
-      <artifactId>accessgroup-integration-service</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.accessgroup</groupId>
-      <artifactId>accessgroup-integration-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::access-control-bom[] -->
+<!-- end::batches-bom[] -->
 <!-- tag::external-account-aggregation-bom[] -->
     <dependency>
       <groupId>com.backbase.eaa.aggregation</groupId>
@@ -2899,82 +2975,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::products-bom[] -->
-<!-- tag::batches-bom[] -->
-    <dependency>
-      <groupId>com.backbase.batch</groupId>
-      <artifactId>payment-batch</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.batch.nacha</groupId>
-      <artifactId>nacha-writer</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.mandate</groupId>
-      <artifactId>mandate-manager</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.batch</groupId>
-      <artifactId>payment-batch</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.mandate</groupId>
-      <artifactId>mandate-manager</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.batch</groupId>
-      <artifactId>payment-batch</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.mandate</groupId>
-      <artifactId>mandate-manager</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.batch</groupId>
-      <artifactId>payment-batch</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.batch</groupId>
-      <artifactId>payment-batch</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.batch</groupId>
-      <artifactId>payment-batch-core-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.mandate</groupId>
-      <artifactId>mandate-manager</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.batch</groupId>
-      <artifactId>payment-batch</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.batch</groupId>
-      <artifactId>payment-batch-core-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.mandate</groupId>
-      <artifactId>mandate-manager</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::batches-bom[] -->
 <!-- tag::self-enrollment-support-api-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
