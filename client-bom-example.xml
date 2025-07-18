@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2025.07.3</version>
+  <version>BANK-VERSION-USING-2025.07.4</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2025.07.3</version>
+        <version>2025.07.4</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -140,6 +140,62 @@ Typically, not everything is needed.
       <classifier>api</classifier>
     </dependency>
 <!-- end::investment-bom[] -->
+<!-- tag::billpay-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.billpay</groupId>
+      <artifactId>billpay-integrator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.billpay</groupId>
+      <artifactId>billpay-integrator</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.billpay</groupId>
+      <artifactId>billpay-integrator</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.billpay</groupId>
+      <artifactId>billpay-integrator</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.billpay</groupId>
+      <artifactId>billpay-integrator</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.billpay</groupId>
+      <artifactId>billpay-integrator</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.capabilities.extended</groupId>
+      <artifactId>billpay-integration-payveris-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.capabilities.extended</groupId>
+      <artifactId>billpay-integration-payveris-service</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.capabilities.extended</groupId>
+      <artifactId>billpay-integration-payveris-service</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.capabilities.extended</groupId>
+      <artifactId>billpay-integration-payveris-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::billpay-bom[] -->
 <!-- tag::service-discovery-bom[] -->
     <dependency>
       <groupId>com.backbase.infra</groupId>
@@ -267,6 +323,50 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::contacts-bom[] -->
+<!-- tag::direct-deposit-switch-bom[] -->
+    <dependency>
+      <groupId>com.backbase.directdepositswitch</groupId>
+      <artifactId>direct-deposit-switcher</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.directdepositswitch</groupId>
+      <artifactId>direct-deposit-switcher</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.directdepositswitch</groupId>
+      <artifactId>direct-deposit-switcher</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.directdepositswitch</groupId>
+      <artifactId>direct-deposit-switcher</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.directdepositswitch</groupId>
+      <artifactId>atomic-connector</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.directdepositswitch</groupId>
+      <artifactId>atomic-connector</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.directdepositswitch</groupId>
+      <artifactId>atomic-connector</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.directdepositswitch</groupId>
+      <artifactId>atomic-connector</artifactId>
+    </dependency>
+<!-- end::direct-deposit-switch-bom[] -->
 <!-- tag::dashboard-bom[] -->
     <dependency>
       <groupId>com.backbase.dashboard</groupId>
@@ -2323,50 +2423,6 @@ Typically, not everything is needed.
       <artifactId>household-manager</artifactId>
     </dependency>
 <!-- end::households-bom[] -->
-<!-- tag::direct-deposit-switch-bom[] -->
-    <dependency>
-      <groupId>com.backbase.directdepositswitch</groupId>
-      <artifactId>direct-deposit-switcher</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.directdepositswitch</groupId>
-      <artifactId>direct-deposit-switcher</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.directdepositswitch</groupId>
-      <artifactId>direct-deposit-switcher</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.directdepositswitch</groupId>
-      <artifactId>direct-deposit-switcher</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.directdepositswitch</groupId>
-      <artifactId>atomic-connector</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.directdepositswitch</groupId>
-      <artifactId>atomic-connector</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.directdepositswitch</groupId>
-      <artifactId>atomic-connector</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.directdepositswitch</groupId>
-      <artifactId>atomic-connector</artifactId>
-    </dependency>
-<!-- end::direct-deposit-switch-bom[] -->
 <!-- tag::web-authentication-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
@@ -2919,62 +2975,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::metrics-bom[] -->
-<!-- tag::billpay-bom[] -->
-    <dependency>
-      <groupId>com.backbase.dbs.billpay</groupId>
-      <artifactId>billpay-integrator</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.billpay</groupId>
-      <artifactId>billpay-integrator</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.billpay</groupId>
-      <artifactId>billpay-integrator</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.billpay</groupId>
-      <artifactId>billpay-integrator</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.billpay</groupId>
-      <artifactId>billpay-integrator</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.billpay</groupId>
-      <artifactId>billpay-integrator</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.capabilities.extended</groupId>
-      <artifactId>billpay-integration-payveris-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.capabilities.extended</groupId>
-      <artifactId>billpay-integration-payveris-service</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.capabilities.extended</groupId>
-      <artifactId>billpay-integration-payveris-service</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.capabilities.extended</groupId>
-      <artifactId>billpay-integration-payveris-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::billpay-bom[] -->
 <!-- tag::self-enrollment-support-api-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
