@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2025.03.33-LTS</version>
+  <version>BANK-VERSION-USING-2025.03.34-LTS</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2025.03.33-LTS</version>
+        <version>2025.03.34-LTS</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -178,71 +178,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::engagements-bom[] -->
-<!-- tag::products-bom[] -->
-    <dependency>
-      <groupId>com.backbase.products</groupId>
-      <artifactId>arrangement-manager-api</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.products</groupId>
-      <artifactId>arrangement-manager</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.products</groupId>
-      <artifactId>arrangement-manager</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.products</groupId>
-      <artifactId>arrangement-manager</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.products</groupId>
-      <artifactId>arrangement-manager</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.products</groupId>
-      <artifactId>arrangement-manager</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.products</groupId>
-      <artifactId>arrangement-manager</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.products</groupId>
-      <artifactId>account-mock</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.products</groupId>
-      <artifactId>account-mock</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.products</groupId>
-      <artifactId>arrangement-integration</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.products</groupId>
-      <artifactId>arrangement-integration</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.products</groupId>
-      <artifactId>arrangement-integration</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::products-bom[] -->
 <!-- tag::forex-bom[] -->
     <dependency>
       <groupId>com.backbase.forex</groupId>
@@ -2410,6 +2345,71 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::appointments-bom[] -->
+<!-- tag::products-bom[] -->
+    <dependency>
+      <groupId>com.backbase.products</groupId>
+      <artifactId>arrangement-manager-api</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.products</groupId>
+      <artifactId>arrangement-manager</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.products</groupId>
+      <artifactId>arrangement-manager</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.products</groupId>
+      <artifactId>arrangement-manager</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.products</groupId>
+      <artifactId>arrangement-manager</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.products</groupId>
+      <artifactId>arrangement-manager</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.products</groupId>
+      <artifactId>arrangement-manager</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.products</groupId>
+      <artifactId>account-mock</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.products</groupId>
+      <artifactId>account-mock</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.products</groupId>
+      <artifactId>arrangement-integration</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.products</groupId>
+      <artifactId>arrangement-integration</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.products</groupId>
+      <artifactId>arrangement-integration</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::products-bom[] -->
 <!-- tag::user-lifecycle-bom[] -->
     <dependency>
       <groupId>com.backbase.userlifecycle</groupId>
