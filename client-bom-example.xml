@@ -6,7 +6,7 @@
 <!-- 
 The customer is most likely NOT using the same version as the Backbase version.
  -->
-  <version>BANK-VERSION-USING-2025.03.40-LTS</version>
+  <version>BANK-VERSION-USING-2025.03.41-LTS</version>
   <packaging>pom</packaging>
   <name>Example BOM Client Project</name>
   <description>A BOM to select a subset of Backbase artifacts.</description>
@@ -17,7 +17,7 @@ The customer is most likely NOT using the same version as the Backbase version.
         <artifactId>backbase-bom</artifactId>
         <type>pom</type>
         <scope>import</scope>
-        <version>2025.03.40-LTS</version>
+        <version>2025.03.41-LTS</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -87,6 +87,36 @@ Typically, not everything is needed.
       <classifier>events</classifier>
     </dependency>
 <!-- end::portfolio-bom[] -->
+<!-- tag::loan-application-bom[] -->
+    <dependency>
+      <groupId>com.backbase.loan-application</groupId>
+      <artifactId>loan-application</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan-application</groupId>
+      <artifactId>loan-application</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan-application</groupId>
+      <artifactId>loan-application</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan-application</groupId>
+      <artifactId>loan-application</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.loan-application</groupId>
+      <artifactId>loan-application</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+<!-- end::loan-application-bom[] -->
 <!-- tag::external-account-aggregation-bom[] -->
     <dependency>
       <groupId>com.backbase.eaa.aggregation</groupId>
@@ -184,66 +214,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::communications-outbound-integration-bom[] -->
-<!-- tag::forex-bom[] -->
-    <dependency>
-      <groupId>com.backbase.forex</groupId>
-      <artifactId>forex</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.forex</groupId>
-      <artifactId>forex</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.forex</groupId>
-      <artifactId>forex</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.forex</groupId>
-      <artifactId>forex</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.forex</groupId>
-      <artifactId>forex</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-<!-- end::forex-bom[] -->
-<!-- tag::loan-application-bom[] -->
-    <dependency>
-      <groupId>com.backbase.loan-application</groupId>
-      <artifactId>loan-application</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan-application</groupId>
-      <artifactId>loan-application</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan-application</groupId>
-      <artifactId>loan-application</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan-application</groupId>
-      <artifactId>loan-application</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.loan-application</groupId>
-      <artifactId>loan-application</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-<!-- end::loan-application-bom[] -->
 <!-- tag::rtc-bom[] -->
     <dependency>
       <groupId>com.backbase.rtc</groupId>
@@ -404,6 +374,89 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::provisioning-bom[] -->
+<!-- tag::transaction-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-manager</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-manager</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-manager</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-manager</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-manager</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-manager</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
+      <artifactId>transaction-enricher</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
+      <artifactId>transaction-enricher</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
+      <artifactId>transaction-enricher</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
+      <artifactId>transaction-enricher</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
+      <artifactId>transaction-enricher</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
+      <artifactId>transaction-enricher</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-integration</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-integration</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.transaction</groupId>
+      <artifactId>transaction-integration</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::transaction-bom[] -->
 <!-- tag::batches-bom[] -->
     <dependency>
       <groupId>com.backbase.batch</groupId>
@@ -811,6 +864,46 @@ Typically, not everything is needed.
       <classifier>api</classifier>
     </dependency>
 <!-- end::identity-core-bom[] -->
+<!-- tag::messages-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.messages</groupId>
+      <artifactId>messages-service</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.messages</groupId>
+      <artifactId>messages-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.messages</groupId>
+      <artifactId>messages-service</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.messages</groupId>
+      <artifactId>messages-service</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.messages</groupId>
+      <artifactId>messages-service</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.messages</groupId>
+      <artifactId>messages-service</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.messages</groupId>
+      <artifactId>messages-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::messages-bom[] -->
 <!-- tag::dashboard-bom[] -->
     <dependency>
       <groupId>com.backbase.dashboard</groupId>
@@ -1092,6 +1185,56 @@ Typically, not everything is needed.
       <artifactId>atomic-connector</artifactId>
     </dependency>
 <!-- end::direct-deposit-switch-bom[] -->
+<!-- tag::engagements-bom[] -->
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>engagement</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>realtime-engagement-orchestrator</artifactId>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>realtime-engagement-orchestrator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.engagement</groupId>
+      <artifactId>realtime-engagement-orchestrator</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::engagements-bom[] -->
 <!-- tag::appointments-bom[] -->
     <dependency>
       <groupId>com.backbase.appointment</groupId>
@@ -1220,62 +1363,6 @@ Typically, not everything is needed.
       <classifier>liquibase</classifier>
     </dependency>
 <!-- end::user-profile-management-bom[] -->
-<!-- tag::contacts-bom[] -->
-    <dependency>
-      <groupId>com.backbase.dbs.contact</groupId>
-      <artifactId>contact-manager</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.contact</groupId>
-      <artifactId>contact-manager</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.contact</groupId>
-      <artifactId>contact-manager</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.contact</groupId>
-      <artifactId>contact-manager</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.contact</groupId>
-      <artifactId>contact-manager</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.contact</groupId>
-      <artifactId>contact-manager</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.contact</groupId>
-      <artifactId>beneficiary-validation-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.contact</groupId>
-      <artifactId>beneficiary-validation-service</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.contact</groupId>
-      <artifactId>beneficiary-validation-service</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.contact</groupId>
-      <artifactId>beneficiary-validation-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::contacts-bom[] -->
 <!-- tag::message-delivery-bom[] -->
     <dependency>
       <groupId>com.backbase.communication</groupId>
@@ -1571,6 +1658,36 @@ Typically, not everything is needed.
       <classifier>events</classifier>
     </dependency>
 <!-- end::credit-cards-bom[] -->
+<!-- tag::forex-bom[] -->
+    <dependency>
+      <groupId>com.backbase.forex</groupId>
+      <artifactId>forex</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.forex</groupId>
+      <artifactId>forex</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.forex</groupId>
+      <artifactId>forex</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.forex</groupId>
+      <artifactId>forex</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.forex</groupId>
+      <artifactId>forex</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+<!-- end::forex-bom[] -->
 <!-- tag::cashflow-forecasting-bom[] -->
     <dependency>
       <groupId>com.backbase.dbs.cashflow</groupId>
@@ -1741,89 +1858,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::customer-profile-bom[] -->
-<!-- tag::transaction-bom[] -->
-    <dependency>
-      <groupId>com.backbase.dbs.transaction</groupId>
-      <artifactId>transaction-manager</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction</groupId>
-      <artifactId>transaction-manager</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction</groupId>
-      <artifactId>transaction-manager</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction</groupId>
-      <artifactId>transaction-manager</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction</groupId>
-      <artifactId>transaction-manager</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction</groupId>
-      <artifactId>transaction-manager</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
-      <artifactId>transaction-enricher</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
-      <artifactId>transaction-enricher</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
-      <artifactId>transaction-enricher</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
-      <artifactId>transaction-enricher</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
-      <artifactId>transaction-enricher</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction.enrichment</groupId>
-      <artifactId>transaction-enricher</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction</groupId>
-      <artifactId>transaction-integration</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction</groupId>
-      <artifactId>transaction-integration</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.transaction</groupId>
-      <artifactId>transaction-integration</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::transaction-bom[] -->
 <!-- tag::bank-calendar-bom[] -->
     <dependency>
       <groupId>com.backbase.calendar</groupId>
@@ -1894,46 +1928,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::user-profile-integration-bom[] -->
-<!-- tag::messages-bom[] -->
-    <dependency>
-      <groupId>com.backbase.dbs.messages</groupId>
-      <artifactId>messages-service</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.messages</groupId>
-      <artifactId>messages-service</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.messages</groupId>
-      <artifactId>messages-service</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.messages</groupId>
-      <artifactId>messages-service</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.messages</groupId>
-      <artifactId>messages-service</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.messages</groupId>
-      <artifactId>messages-service</artifactId>
-      <classifier>classes</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.dbs.messages</groupId>
-      <artifactId>messages-service</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::messages-bom[] -->
 <!-- tag::remote-config-bom[] -->
     <dependency>
       <groupId>com.backbase.remoteconfig</groupId>
@@ -1994,56 +1988,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::external-authorization-bom[] -->
-<!-- tag::engagements-bom[] -->
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>engagement</artifactId>
-      <type>zip</type>
-      <classifier>events</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>realtime-engagement-orchestrator</artifactId>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>realtime-engagement-orchestrator</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.engagement</groupId>
-      <artifactId>realtime-engagement-orchestrator</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::engagements-bom[] -->
 <!-- tag::address-autocomplete-bom[] -->
     <dependency>
       <groupId>com.backbase.address-autocomplete</groupId>
@@ -2642,6 +2586,62 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::web-authentication-bom[] -->
+<!-- tag::contacts-bom[] -->
+    <dependency>
+      <groupId>com.backbase.dbs.contact</groupId>
+      <artifactId>contact-manager</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.contact</groupId>
+      <artifactId>contact-manager</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.contact</groupId>
+      <artifactId>contact-manager</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.contact</groupId>
+      <artifactId>contact-manager</artifactId>
+      <type>zip</type>
+      <classifier>events</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.contact</groupId>
+      <artifactId>contact-manager</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.contact</groupId>
+      <artifactId>contact-manager</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.contact</groupId>
+      <artifactId>beneficiary-validation-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.contact</groupId>
+      <artifactId>beneficiary-validation-service</artifactId>
+      <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.contact</groupId>
+      <artifactId>beneficiary-validation-service</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.dbs.contact</groupId>
+      <artifactId>beneficiary-validation-service</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::contacts-bom[] -->
 <!-- tag::self-enrollment-support-api-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
@@ -2986,6 +2986,34 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::service-discovery-bom[] -->
+<!-- tag::comments-bom[] -->
+    <dependency>
+      <groupId>com.backbase.comments</groupId>
+      <artifactId>comments</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.comments</groupId>
+      <artifactId>comments</artifactId>
+      <type>zip</type>
+      <classifier>api</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.comments</groupId>
+      <artifactId>comments</artifactId>
+      <type>zip</type>
+      <classifier>liquibase</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.comments</groupId>
+      <artifactId>comments-starter</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.backbase.comments</groupId>
+      <artifactId>comments</artifactId>
+      <type>json</type>
+      <classifier>meta</classifier>
+    </dependency>
+<!-- end::comments-bom[] -->
 <!-- tag::investment-bom[] -->
     <dependency>
       <groupId>com.backbase.investment</groupId>
@@ -3042,34 +3070,6 @@ Typically, not everything is needed.
       <classifier>meta</classifier>
     </dependency>
 <!-- end::lending-regulatory-compliance-bom[] -->
-<!-- tag::comments-bom[] -->
-    <dependency>
-      <groupId>com.backbase.comments</groupId>
-      <artifactId>comments</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.comments</groupId>
-      <artifactId>comments</artifactId>
-      <type>zip</type>
-      <classifier>api</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.comments</groupId>
-      <artifactId>comments</artifactId>
-      <type>zip</type>
-      <classifier>liquibase</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.comments</groupId>
-      <artifactId>comments-starter</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.backbase.comments</groupId>
-      <artifactId>comments</artifactId>
-      <type>json</type>
-      <classifier>meta</classifier>
-    </dependency>
-<!-- end::comments-bom[] -->
 <!-- tag::device-management-bom[] -->
     <dependency>
       <groupId>com.backbase.identity</groupId>
